@@ -11,6 +11,7 @@ target 'Plugin' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Capacitor', :path => '/Users/stewan/dev/capacitor'
+  # pod 'Capacitor' ## uncomment to use capacitor's in production version
 end
 
 target 'PluginTests' do
@@ -20,4 +21,5 @@ target 'PluginTests' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Capacitor', :path => '/Users/stewan/dev/capacitor'
+  # pod 'Capacitor' ## uncomment to use capacitor's in production version
 end
