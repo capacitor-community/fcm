@@ -10,19 +10,17 @@ This plugin is currently under active development and has not yet been published
 
 - [x] subscribe to topic
 - [ ] get token
-- [ ] share (wip)
 
 ## Android
 
 - [ ] subscribe to topic
 - [ ] get token
-- [ ] share (wip)
 
 ## Steps
 
 **Before all**
 
-I'm using a local build of capacitor, so you have to first change the capacitor's path at [podfile]() of this plugin to reflect your needs
+I'm using a local build of capacitor, so you have to first change the capacitor's path at [podfile](https://github.com/stewwan/capacitor-fcm/blob/master/ios/Plugin/Podfile) of this plugin to reflect your needs
 
 - git clone this repo
 - npm install
