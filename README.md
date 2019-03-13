@@ -4,23 +4,25 @@ Capacitor plugin to enable Firebase Cloud Messaging
 
 ## Notice
 
-This plugin is currently under active development and has not yet been published.
+> This plugin is currently under active development and has not yet been published.
 
 ## iOS
 
 - [x] subscribe to topic
+- [x] unsubscribe from topic
 - [ ] get token
 
 ## Android
 
 - [ ] subscribe to topic
+- [ ] unsubscribe from topic
 - [ ] get token
 
 ## Steps
 
-**Before all**
+**Important**
 
-I'm using a local build of capacitor, so you have to first change the capacitor's path at [podfile](https://github.com/stewwan/capacitor-fcm/blob/master/ios/Plugin/Podfile) of this plugin to reflect your needs
+For now I'm using a custom capacitor build (locally), so you have to change the path at [podfile](https://github.com/stewwan/capacitor-fcm/blob/master/ios/Plugin/Podfile).
 
 - git clone this repo
 - npm install
@@ -28,8 +30,8 @@ I'm using a local build of capacitor, so you have to first change the capacitor'
 - npm link
 - cd `ios/Plugin`
 - pod install
-- go to your capacitor app and `npm link capacitor-fcm`
-- add to podfile at `ios/App/Podfile`
+- go back to your capacitor powered app and `npm link capacitor-fcm`
+- cd to `ios/App/Podfile` and add
   ```
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
@@ -37,11 +39,9 @@ I'm using a local build of capacitor, so you have to first change the capacitor'
   ```
 - pod install
 
-## Important step
+## Important step (iOS)
 
-Because capacitor still in a really earlier beta stage, we have to manually change the behavior of app delegate for iOS apps.
-
-open your client `AppDelegate.swift` and make necessary changes to reflect the following
+open your client `AppDelegate.swift` and make the necessary changes to reflect the following
 
 ```swift
 import UIKit
@@ -274,6 +274,8 @@ extension AppDelegate : MessagingDelegate {
 3. To enable `remote notifications` as a background mode at xcode
 
 After all of these steps you should be set to go. Try to run your client using `ionic cap run ios`.
+
+Follow me [@Twitter](https://twitter.com/StewanSilva)
 
 ## License
 
