@@ -6,4 +6,5 @@ declare global {
 
 export interface IFCMPlugin {
   subscribeTo(options: { topic: string }): Promise<any>;
+  unsubscribeFrom(options: { topic: string }): Promise<any>;
 }

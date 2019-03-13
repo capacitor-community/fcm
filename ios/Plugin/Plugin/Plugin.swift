@@ -18,13 +18,30 @@ public class FCM: CAPPlugin {
         // [START subscribe_topic]
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().subscribe(toTopic: topicName) { error in
-            print("Subscribed to weather topic")
+            // print("Subscribed to weather topic")
             if ((error) != nil) {
                 print("ERROR while trying to subscribe topic \(topicName)")
                 call.error("Can't subscribe to topic \(topicName)")
             }else{
                 call.success([
                     "message": "subscribed to topic \(topicName)"
+                    ])
+            }
+        }
+        // [END subscribe_topic]
+    }
+    
+    @objc func unsubscribeFrom(_ call: CAPPluginCall) {
+        // [START subscribe_topic]
+        let topicName = call.getString("topic") ?? ""
+        Messaging.messaging().unsubscribe(fromTopic: topicName) { error in
+            // print("UnSubscribed from weather topic")
+            if ((error) != nil) {
+                print("ERROR while trying to unsubscribe from topic \(topicName)")
+                call.error("Can't unsubscribe from topic \(topicName)")
+            }else{
+                call.success([
+                    "message": "unsubscribed from topic \(topicName)"
                     ])
             }
         }
