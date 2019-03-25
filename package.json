@@ -1,14 +1,18 @@
 {
   "name": "capacitor-fcm",
   "version": "0.0.1",
-  "description": "bring firebase cloud messaging feature to capacitor",
+  "description": "Brings Firebase Cloud Messaging features to Capacitor",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release:custom": "standard-version release --release-as x.x.x",
+    "release:patch": "standard-version release --release-as patch",
+    "release:minor": "standard-version release --release-as minor",
+    "release:major": "standard-version release --release-as major"
   },
   "author": "Stewan Silva",
   "license": "MIT",
@@ -27,7 +31,9 @@
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "fcm",
+    "firebase cloud messaging"
   ],
   "capacitor": {
     "ios": {

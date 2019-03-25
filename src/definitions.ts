@@ -5,6 +5,7 @@ declare global {
 }
 
 export interface IFCMPlugin {
-  subscribeTo(options: { topic: string }): Promise<any>;
-  unsubscribeFrom(options: { topic: string }): Promise<any>;
+  subscribeTo(options: { topic: string }): Promise<{ message: string }>;
+  unsubscribeFrom(options: { topic: string }): Promise<{ message: string }>;
+  getToken(): Promise<{ token: string }>;
 }

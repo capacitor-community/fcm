@@ -6,4 +6,5 @@
 CAP_PLUGIN(FCM, "FCMPlugin",
            CAP_PLUGIN_METHOD(subscribeTo, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(unsubscribeFrom, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(getToken, CAPPluginReturnPromise);
 )

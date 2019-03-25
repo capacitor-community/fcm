@@ -4,10 +4,13 @@ import { IFCMPlugin } from "./definitions";
 const { FCMPlugin } = Plugins;
 
 export class FCM implements IFCMPlugin {
-  subscribeTo(options: { topic: string }): Promise<any> {
+  subscribeTo(options: { topic: string }) {
     return FCMPlugin.subscribeTo({ topic: options.topic });
   }
-  unsubscribeFrom(options: { topic: string }): Promise<any> {
+  unsubscribeFrom(options: { topic: string }) {
     return FCMPlugin.unsubscribeFrom({ topic: options.topic });
+  }
+  getToken() {
+    return FCMPlugin.getToken();
   }
 }

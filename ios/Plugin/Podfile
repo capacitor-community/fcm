@@ -6,20 +6,15 @@ target 'Plugin' do
   use_frameworks!
 
   # Pods for IonicRunner
-
-  #pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'Capacitor', :path => '/Users/stewan/dev/capacitor'
-  # pod 'Capacitor' ## uncomment to use capacitor's in production version
+  pod 'Capacitor'
 end
 
 target 'PluginTests' do
   use_frameworks!
 
-  #pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'Capacitor', :path => '/Users/stewan/dev/capacitor'
-  # pod 'Capacitor' ## uncomment to use capacitor's in production version
+  pod 'Capacitor'
 end

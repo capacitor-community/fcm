@@ -1,10 +1,11 @@
 import Foundation
 import Capacitor
+import UserNotifications
+
 import FirebaseMessaging
 import FirebaseCore
 import FirebaseAnalytics
 import FirebaseInstanceID
-
 
 
 /**
@@ -12,10 +13,14 @@ import FirebaseInstanceID
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
  */
 @objc(FCM)
-public class FCM: CAPPlugin {
+public class FCM: CAPPlugin, MessagingDelegate {
+    
+    public override func load() {
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+    }
     
     @objc func subscribeTo(_ call: CAPPluginCall) {
-        // [START subscribe_topic]
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().subscribe(toTopic: topicName) { error in
             // print("Subscribed to weather topic")
@@ -28,16 +33,12 @@ public class FCM: CAPPlugin {
                     ])
             }
         }
-        // [END subscribe_topic]
     }
     
     @objc func unsubscribeFrom(_ call: CAPPluginCall) {
-        // [START subscribe_topic]
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().unsubscribe(fromTopic: topicName) { error in
-            // print("UnSubscribed from weather topic")
             if ((error) != nil) {
-                print("ERROR while trying to unsubscribe from topic \(topicName)")
                 call.error("Can't unsubscribe from topic \(topicName)")
             }else{
                 call.success([
@@ -45,31 +46,17 @@ public class FCM: CAPPlugin {
                     ])
             }
         }
-        // [END subscribe_topic]
     }
     
-    
-    // @todo
     @objc func getToken(_ call: CAPPluginCall) {
-        //        // [START log_fcm_reg_token]
-        //        let token = Messaging.messaging().fcmToken
-        //        print("FCM token: \(token ?? "")")
-        //        // [END log_fcm_reg_token]
-        //
-        //
-        //                call.success([
-        //                    "token": token as Any
-        //                ])
-        //
-        //        // [START log_iid_reg_token]
-        //        InstanceID.instanceID().instanceID { (result, error) in
-        //            if let error = error {
-        //                print("Error fetching remote instance ID: \(error)")
-        //            } else if let result = result {
-        //                print("Remote instance ID token: \(result.token)")
-        //
-        //            }
-        //        }
-        //        // [END log_iid_reg_token]
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                call.error("Error", error)
+            } else if let result = result {
+                call.success([
+                    "token": result.token
+                    ])
+            }
+        }
     }
 }
