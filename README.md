@@ -85,7 +85,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - add `google-services.json` to your `android/app` folder
 - `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
-> on your `MainActivity.java` file add to the header `import io.stewan.capacitor.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
+> on your `MainActivity.java` file add `import io.stewan.capacitor.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
 
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
