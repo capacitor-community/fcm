@@ -7,6 +7,7 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 - subscribeTo
 - unsubscribeFrom
 - getToken
+- deleteInstance `android only`
 
 ## Usage
 
@@ -71,13 +72,32 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - enable remote notification capabilities
 - add `GoogleService-Info.plist` to your app in xcode
 
-> Important Notice: every time you change a native code you may need to clean the cache (Product > Clean build folder) and then run the app again.
+> Tip: every time you change a native code you may need to clean the cache (Product > Clean build folder) and then run the app again.
 
 ## Android setup
 
-(soon)
+- `ionic start my-cap-app --capacitor`
+- `cd my-cap-app`
+- `npm install —-save capacitor-fcm`
+- `mkdir www && touch www/index.html`
+- `npx cap add android`
+- `npx cap open android`
+- add `google-services.json` to your `android/app` folder
+- `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
-Now you should be set to go. Try to run your client using `ionic cap run ios --livereload`.
+> on your `MainActivity.java` file add to the header `import io.stewan.capacitor.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
+
+Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
+
+> Tip: every time you change a native code you may need to clean the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
+
+## Sample app
+
+(coming soon)
+
+## You may also like
+
+- [capacitor-twitter](https://github.com/stewwan/capacitor-twitter)
 
 Cheers 🍻
 
