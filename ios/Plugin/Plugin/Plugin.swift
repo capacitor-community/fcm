@@ -58,5 +58,13 @@ public class FCM: CAPPlugin, MessagingDelegate {
                     ])
             }
         }
+        //        let token = Messaging.messaging().fcmToken;
+        //        if (token != nil) {
+        //            call.success([
+        //                "token": token!
+        //                ])
+        //        }else{
+        //            call.error("Error")
+        //        }
     }
 }
