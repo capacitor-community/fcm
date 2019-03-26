@@ -13,4 +13,11 @@ export class FCM implements IFCMPlugin {
   getToken() {
     return FCMPlugin.getToken();
   }
+
+  /**
+   * only androidy
+   */
+  deleteInstance() {
+    return FCMPlugin.deleteInstance();
+  }
 }
