@@ -72,7 +72,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - enable remote notification capabilities
 - add `GoogleService-Info.plist` to your app in xcode
 
-> Tip: every time you change a native code you may need to clean the cache (Product > Clean build folder) and then run the app again.
+> Tip: every time you change a native code you may need to clean up the cache (Product > Clean build folder) and then run the app again.
 
 ## Android setup
 
@@ -89,7 +89,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
-> Tip: every time you change a native code you may need to clean the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
+> Tip: every time you change a native code you may need to clean up the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
 
 ## Sample app
 
@@ -97,6 +97,8 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 ## You may also like
 
+- [capacitor-media](https://github.com/stewwan/capacitor-media)
+- [capacitor-intercom](https://github.com/stewwan/capacitor-intercom)
 - [capacitor-twitter](https://github.com/stewwan/capacitor-twitter)
 
 Cheers 🍻
