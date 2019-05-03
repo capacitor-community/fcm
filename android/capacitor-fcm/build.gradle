@@ -45,5 +45,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     androidTestImplementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }
 
