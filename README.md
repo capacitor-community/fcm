@@ -2,6 +2,10 @@
 
 Capacitor plugin to enable features from Firebase Cloud Messaging
 
+> ### Notice
+>
+> This plugin is intended to be used together with the capacitor api for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications).
+
 ## API
 
 - subscribeTo
