@@ -71,6 +71,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `npm install —-save capacitor-fcm`
 - `mkdir www && touch www/index.html`
 - `npx cap add ios`
+- `npx cap sync`
 - `npx cap open ios`
 - sign your app at xcode (general tab)
 - enable remote notification capabilities
@@ -85,6 +86,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `npm install —-save capacitor-fcm`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
+- `npx cap sync`
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
 - `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
