@@ -18,6 +18,14 @@ public class FCM: CAPPlugin, MessagingDelegate {
     public override func load() {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: Notification.Name(CAPNotifications.DidRegisterForRemoteNotificationsWithDeviceToken.name()), object: nil)
+    }
+    
+    @objc func didRegisterWithToken(notification: NSNotification) {
+        guard let deviceToken = notification.object as? Data else {
+            return
+        }
+        Messaging.messaging().apnsToken = deviceToken
     }
     
     @objc func subscribeTo(_ call: CAPPluginCall) {
