@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/stewwan/capacitor-fcm/compare/v0.0.5...v0.0.6) (2019-06-04)
+
+
+### Bug Fixes
+
+* **ios:** notifications were not being delivered on a freshed app install ([f3d10a5](https://github.com/stewwan/capacitor-fcm/commit/f3d10a5))
+* **ios:** notifications were not being delivered on a freshed app install ([3205224](https://github.com/stewwan/capacitor-fcm/commit/3205224))
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/stewwan/capacitor-fcm/compare/v0.0.4...v0.0.5) (2019-05-03)
 
