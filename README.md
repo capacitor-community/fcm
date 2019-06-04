@@ -68,14 +68,21 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
-- `npm install —-save capacitor-fcm`
+- `npm install --save capacitor-fcm`
 - `mkdir www && touch www/index.html`
+- `sudo gem install cocoapods`
 - `npx cap add ios`
 - `npx cap sync ios`
 - `npx cap open ios`
 - sign your app at xcode (general tab)
 - enable remote notification capabilities
-- add `GoogleService-Info.plist` to your app in xcode
+- add `GoogleService-Info.plist` to the app folder in xcode
+- turn `swizzling` off on app's `info.plist`
+
+```
+<key>FirebaseAppDelegateProxyEnabled</key>
+<false/>
+```
 
 > Tip: every time you change a native code you may need to clean up the cache (Product > Clean build folder) and then run the app again.
 
@@ -83,7 +90,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
-- `npm install —-save capacitor-fcm`
+- `npm install --save capacitor-fcm`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
 - `npx cap sync android`
