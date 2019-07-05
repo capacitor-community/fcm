@@ -10,6 +10,7 @@
     s.source_files = 'ios/Plugin/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
     s.ios.deployment_target  = '11.0'
     s.dependency 'Capacitor'
+    s.dependency 'Firebase'
     s.dependency 'FirebaseCore'
     s.dependency 'FirebaseMessaging'
     s.static_framework = true
