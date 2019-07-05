@@ -3,15 +3,17 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.0.7"></a>
-## [0.0.7](https://github.com/stewwan/capacitor-fcm/compare/v0.0.6...v0.0.7) (2019-07-05)
 
+## [0.0.7](https://github.com/stewwan/capacitor-fcm/compare/v0.0.6...v0.0.7) (2019-07-05)
 
 ### Bug Fixes
 
-* **podspec:** add firebase back ([933ddbe](https://github.com/stewwan/capacitor-fcm/commit/933ddbe))
-* **README:** add sample app link ([ef67512](https://github.com/stewwan/capacitor-fcm/commit/ef67512))
+- **podspec:** remove analytics stuff
+- **ios** check for firebase instance on load
 
+### Info
 
+- **README:** add sample app link ([ef67512](https://github.com/stewwan/capacitor-fcm/commit/ef67512))
 
 <a name="0.0.6"></a>
 
