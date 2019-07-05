@@ -10,6 +10,8 @@ import FirebaseInstanceID
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
+ *
+ * Created by Stewan Silva on 1/23/19.
  */
 @objc(FCM)
 public class FCM: CAPPlugin, MessagingDelegate {

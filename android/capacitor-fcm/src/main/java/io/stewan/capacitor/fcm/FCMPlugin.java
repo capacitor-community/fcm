@@ -17,6 +17,12 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.IOException;
 
+/**
+ * Please read the Capacitor Android Plugin Development Guide
+ * here: https://capacitor.ionicframework.com/docs/plugins/android
+ *
+ * Created by Stewan Silva on 1/23/19.
+ */
 @NativePlugin()
 public class FCMPlugin extends Plugin {
 
