@@ -1,10 +1,11 @@
-import { Plugins } from "@capacitor/core";
-import { IFCMPlugin } from "./definitions";
+import { Plugins } from '@capacitor/core';
+import { FCMProtocol } from './definitions';
 
 const { FCMPlugin } = Plugins;
 
-export class FCM implements IFCMPlugin {
+export class FCM implements FCMProtocol {
   subscribeTo(options: { topic: string }) {
+    console.log(123, FCMPlugin);
     return FCMPlugin.subscribeTo({ topic: options.topic });
   }
   unsubscribeFrom(options: { topic: string }) {

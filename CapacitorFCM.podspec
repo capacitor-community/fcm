@@ -1,8 +1,8 @@
 
   Pod::Spec.new do |s|
     s.name = 'CapacitorFcm'
-    s.version = '0.0.1'
-    s.summary = 'bring firebase cloud messaging feature to capacitor'
+    s.version = '0.0.6'
+    s.summary = 'Enable Firebase Cloud Messaging features for Capacitor apps'
     s.license = 'MIT'
     s.homepage = 'https://github.com/stewwan/capacitor-fcm'
     s.author = 'Stewan Silva'
@@ -10,10 +10,7 @@
     s.source_files = 'ios/Plugin/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
     s.ios.deployment_target  = '11.0'
     s.dependency 'Capacitor'
-    s.dependency 'Firebase'
-    s.dependency 'FirebaseMessaging'
     s.dependency 'FirebaseCore'
-    s.dependency 'FirebaseAnalytics'
-    s.dependency 'FirebaseInstanceID'
+    s.dependency 'FirebaseMessaging'
     s.static_framework = true
   end

@@ -4,7 +4,6 @@ import UserNotifications
 
 import FirebaseMessaging
 import FirebaseCore
-import FirebaseAnalytics
 import FirebaseInstanceID
 
 
@@ -16,7 +15,9 @@ import FirebaseInstanceID
 public class FCM: CAPPlugin, MessagingDelegate {
     
     public override func load() {
-        FirebaseApp.configure()
+        if (FirebaseApp.app() == nil) {
+          FirebaseApp.configure();
+        }
         Messaging.messaging().delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: Notification.Name(CAPNotifications.DidRegisterForRemoteNotificationsWithDeviceToken.name()), object: nil)
     }
@@ -61,18 +62,11 @@ public class FCM: CAPPlugin, MessagingDelegate {
             if let error = error {
                 call.error("Error", error)
             } else if let result = result {
+                print(result.token)
                 call.success([
                     "token": result.token
-                    ])
+                ])
             }
         }
-        //        let token = Messaging.messaging().fcmToken;
-        //        if (token != nil) {
-        //            call.success([
-        //                "token": token!
-        //                ])
-        //        }else{
-        //            call.error("Error")
-        //        }
     }
 }
