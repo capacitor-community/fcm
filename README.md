@@ -1,4 +1,4 @@
-# capacitor-fcm
+# capacitor-fcm [![npm version](https://badge.fury.io/js/capacitor-fcm.svg)](https://badge.fury.io/js/capacitor-fcm)
 
 Capacitor plugin to enable features from Firebase Cloud Messaging
 
@@ -106,10 +106,11 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 ## Sample app
 
-(coming soon)
+https://github.com/stewwan/capacitor-fcm-demo
 
 ## You may also like
 
+- [capacitor-analytics](https://github.com/stewwan/capacitor-analytics)
 - [capacitor-media](https://github.com/stewwan/capacitor-media)
 - [capacitor-intercom](https://github.com/stewwan/capacitor-intercom)
 - [capacitor-twitter](https://github.com/stewwan/capacitor-twitter)
