@@ -16,17 +16,14 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 ## Usage
 
 ```js
-import { FCM } from "capacitor-fcm";
-const fcm = new FCM();
-
 import { Plugins } from "@capacitor/core";
-const { PushNotifications } = Plugins;
+const { FCMPlugin, PushNotifications } = Plugins;
 
 //
 // Subscribe to a specific topic
 PushNotifications.register()
     .then(_ => {
-    fcm
+    FCMPlugin
         .subscribeTo({ topic: "test" })
         .then(r => alert(`subscribed to topic`))
         .catch(err => console.log(err));
@@ -35,7 +32,7 @@ PushNotifications.register()
 
 //
 // Unsubscribe from a specific topic
-fcm
+FCMPlugin
     .unsubscribeFrom({ topic: "test" })
     .then(r => alert(`unsubscribed from topic`))
     .catch(err => console.log(err));
@@ -43,7 +40,7 @@ fcm
 
 //
 // get remote token
-fcm
+FCMPlugin
     .getToken()
     .then(r => alert(`Token ${r.token}`))
     .catch(err => console.log(err));
