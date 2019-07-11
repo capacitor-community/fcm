@@ -111,7 +111,9 @@ https://github.com/stewwan/capacitor-fcm-demo
 ## You may also like
 
 - [capacitor-analytics](https://github.com/stewwan/capacitor-analytics)
+- [capacitor-crashlytics](https://github.com/stewwan/capacitor-crashlytics)
 - [capacitor-media](https://github.com/stewwan/capacitor-media)
+- [capacitor-datepick](https://github.com/stewwan/capacitor-datepick)
 - [capacitor-intercom](https://github.com/stewwan/capacitor-intercom)
 - [capacitor-twitter](https://github.com/stewwan/capacitor-twitter)
 
