@@ -4,14 +4,16 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 
 > ### Notice
 >
-> This plugin is intended to be used together with the capacitor api for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications).
+> This plugin is intended to be used together with capacitor api for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications). Capacitor only provides APN token whereas this plugin offers the possibility to work with FCM tokens.
 
 ## API
 
-- subscribeTo
-- unsubscribeFrom
-- getToken
-- deleteInstance `android only`
+| method            | info                                          | platform    |
+| ----------------- | --------------------------------------------- | ----------- |
+| `subscribeTo`     | subscribe to fcm topic                        | ios/android |
+| `unsubscribeFrom` | unsubscribe from fcm topic                    | ios/android |
+| `getToken`        | get fcm token to eventually use from a server | ios/android |
+| `deleteInstance`  | remove local fcm instance completely          | android     |
 
 ## Usage
 
