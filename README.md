@@ -4,7 +4,7 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 
 > ### Notice
 >
-> This plugin is intended to be used together with Capacitor API for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications). Capacitor only provides APN token whereas this plugin offers the possibility to work with FCM tokens.
+> This plugin is intended to be used together with Capacitor API for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications). Capacitor only provides APN token whereas this plugin offers the possibility to work with FCM tokens and more.
 
 ## API
 
