@@ -9,7 +9,7 @@ export class FCM implements FCMProtocol {
    * Subscribe to fcm topic
    * @param options 
    */
-  subscribeTo(options: { topic: string }): Promise<any> {
+  subscribeTo(options: { topic: string }): Promise<{ message: string }> {
     return FCMPlugin.subscribeTo({ topic: options.topic });
   }
 
@@ -17,14 +17,14 @@ export class FCM implements FCMProtocol {
    * Unsubscribe from fcm topic
    * @param options 
    */
-  unsubscribeFrom(options: { topic: string }): Promise<any> {
+  unsubscribeFrom(options: { topic: string }): Promise<{ message: string }> {
     return FCMPlugin.unsubscribeFrom({ topic: options.topic });
   }
 
   /**
    * Get fcm token to eventually use from a serve
    */
-  getToken(): Promise<any> {
+  getToken(): Promise<{ token: string }> {
     return FCMPlugin.getToken();
   }
 
