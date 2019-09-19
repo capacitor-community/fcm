@@ -13,7 +13,7 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 | `subscribeTo`     | subscribe to fcm topic                        | ios/android |
 | `unsubscribeFrom` | unsubscribe from fcm topic                    | ios/android |
 | `getToken`        | get fcm token to eventually use from a server | ios/android |
-| `deleteInstance`  | remove local fcm instance completely          | android     |
+| `deleteInstance`  | remove local fcm instance completely          | ios/android     |
 
 ## Usage
 
@@ -48,6 +48,14 @@ fcm
 fcm
     .getToken()
     .then(r => alert(`Token ${r.token}`))
+    .catch(err => console.log(err));
+}
+
+//
+// remove local fcm instance completely
+fcm
+    .deleteInstance()
+    .then(() => alert(`Token deleted`))
     .catch(err => console.log(err));
 }
 ```

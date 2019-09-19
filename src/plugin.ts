@@ -4,21 +4,34 @@ import { FCMProtocol } from './definitions';
 const { FCMPlugin } = Plugins;
 
 export class FCM implements FCMProtocol {
-  subscribeTo(options: { topic: string }) {
-    console.log(123, FCMPlugin);
+
+  /**
+   * Subscribe to fcm topic
+   * @param options 
+   */
+  subscribeTo(options: { topic: string }): Promise<any> {
     return FCMPlugin.subscribeTo({ topic: options.topic });
   }
-  unsubscribeFrom(options: { topic: string }) {
+
+  /**
+   * Unsubscribe from fcm topic
+   * @param options 
+   */
+  unsubscribeFrom(options: { topic: string }): Promise<any> {
     return FCMPlugin.unsubscribeFrom({ topic: options.topic });
   }
-  getToken() {
+
+  /**
+   * Get fcm token to eventually use from a serve
+   */
+  getToken(): Promise<any> {
     return FCMPlugin.getToken();
   }
 
   /**
-   * only androidy
+   * Remove local fcm instance completely
    */
-  deleteInstance() {
+  deleteInstance(): Promise<any> {
     return FCMPlugin.deleteInstance();
   }
 }

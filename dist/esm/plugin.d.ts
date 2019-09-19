@@ -1,14 +1,25 @@
 import { FCMProtocol } from './definitions';
 export declare class FCM implements FCMProtocol {
+    /**
+     * Subscribe to fcm topic
+     * @param options
+     */
     subscribeTo(options: {
         topic: string;
-    }): any;
+    }): Promise<any>;
+    /**
+     * Unsubscribe from fcm topic
+     * @param options
+     */
     unsubscribeFrom(options: {
         topic: string;
-    }): any;
-    getToken(): any;
+    }): Promise<any>;
     /**
-     * only androidy
+     * Get fcm token to eventually use from a serve
      */
-    deleteInstance(): any;
+    getToken(): Promise<any>;
+    /**
+     * Remove local fcm instance completely
+     */
+    deleteInstance(): Promise<any>;
 }
