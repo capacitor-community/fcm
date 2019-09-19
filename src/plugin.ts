@@ -23,6 +23,7 @@ export class FCM implements FCMProtocol {
 
   /**
    * Get fcm token to eventually use from a serve
+   * @deprecated capacitor native method `register()` does the same thing
    */
   getToken(): Promise<{ token: string }> {
     return FCMPlugin.getToken();
