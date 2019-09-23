@@ -90,7 +90,7 @@ public class FCMPlugin extends Plugin {
             public void onSuccess(InstanceIdResult instanceIdResult) {
                 JSObject data = new JSObject();
                 data.put("token", instanceIdResult.getToken());
-                call.success();
+                call.success(data);
             }
         });
         FirebaseInstanceId.getInstance().getInstanceId().addOnFailureListener(new OnFailureListener() {
