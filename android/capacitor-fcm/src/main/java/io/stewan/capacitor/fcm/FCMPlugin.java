@@ -83,7 +83,6 @@ public class FCMPlugin extends Plugin {
         }
     }
 
-    @Deprecated() // capacitor native method `register()` does the same thing
     @PluginMethod()
     public void getToken(final PluginCall call) {
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(getActivity(),  new OnSuccessListener<InstanceIdResult>() {

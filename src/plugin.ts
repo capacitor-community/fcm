@@ -23,7 +23,7 @@ export class FCM implements FCMProtocol {
 
   /**
    * Get fcm token to eventually use from a serve
-   * @deprecated capacitor native method `register()` does the same thing
+   * Do not use to register in firebase, it is recommended to use the `register ()` method.
    */
   getToken(): Promise<{ token: string }> {
     return FCMPlugin.getToken();
