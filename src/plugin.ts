@@ -23,7 +23,15 @@ export class FCM implements FCMProtocol {
 
   /**
    * Get fcm token to eventually use from a serve
-   * Do not use to register in firebase, it is recommended to use the `register ()` method.
+   * 
+   * Recommended to use this instead of 
+   * @usage
+   * ```typescript
+   * PushNotifications.addListener("registration", (token) => {
+   *   console.log(token.data);
+   * });
+   * ``` 
+   * because the native capacitor method, for apple, returns the APN's token
    */
   getToken(): Promise<{ token: string }> {
     return FCMPlugin.getToken();
