@@ -8,5 +8,5 @@ export interface FCMProtocol {
   subscribeTo(options: { topic: string }): Promise<{ message: string }>;
   unsubscribeFrom(options: { topic: string }): Promise<{ message: string }>;
   getToken(): Promise<{ token: string }>;
-  deleteInstance(): Promise<boolean>; // only androidy
+  deleteInstance(): Promise<boolean>;
 }

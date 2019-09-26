@@ -7,10 +7,8 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -87,20 +85,18 @@ public class FCMPlugin extends Plugin {
 
     @PluginMethod()
     public void getToken(final PluginCall call) {
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (!task.isSuccessful()) {
-                            call.error("Cant get token", task.getException());
-                            return;
-                        }
-
-                        String token = task.getResult().getToken();
-                        JSObject ret = new JSObject();
-                        ret.put("token", token);
-                        call.success(ret);
-                    }
-                });
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(getActivity(),  new OnSuccessListener<InstanceIdResult>() {
+            @Override
+            public void onSuccess(InstanceIdResult instanceIdResult) {
+                JSObject data = new JSObject();
+                data.put("token", instanceIdResult.getToken());
+                call.success(data);
+            }
+        });
+        FirebaseInstanceId.getInstance().getInstanceId().addOnFailureListener(new OnFailureListener() {
+            public void onFailure(Exception e) {
+                call.error("Failed to get instance FirebaseID", e);
+            }
+        });
     }
 }

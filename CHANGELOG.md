@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/stewwan/capacitor-fcm/compare/v0.0.9...v0.0.10) (2019-09-24)
+
+### Features
+
+- **FCM:** update README docs ([b5391a6](https://github.com/stewwan/capacitor-fcm/commit/b5391a6))
+- **ios:** add to deleteInstance() ([e2c8e10](https://github.com/stewwan/capacitor-fcm/commit/e2c8e10))
+
+
 ### [0.0.9](https://github.com/stewwan/capacitor-fcm/compare/v0.0.7...v0.0.9) (2019-09-23)
 
 

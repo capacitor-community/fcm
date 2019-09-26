@@ -13,11 +13,11 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 | `subscribeTo`     | subscribe to fcm topic                        | ios/android |
 | `unsubscribeFrom` | unsubscribe from fcm topic                    | ios/android |
 | `getToken`        | get fcm token to eventually use from a server | ios/android |
-| `deleteInstance`  | remove local fcm instance completely          | android     |
+| `deleteInstance`  | remove local fcm instance completely          | ios/android     |
 
 ## Usage
 
-```js
+```ts
 import { FCM } from "capacitor-fcm";
 const fcm = new FCM();
 
@@ -43,11 +43,23 @@ fcm
     .catch(err => console.log(err));
 }
 
-//
-// get remote token
+/**
+ * get remote token 
+ * 
+ * Recommended to use this instead of  PushNotifications.addListener("registration", ...);
+ * because the native capacitor method, for apple, returns the APN's token
+ */
 fcm
     .getToken()
     .then(r => alert(`Token ${r.token}`))
+    .catch(err => console.log(err));
+}
+
+//
+// remove local fcm instance completely
+fcm
+    .deleteInstance()
+    .then(() => alert(`Token deleted`))
     .catch(err => console.log(err));
 }
 ```

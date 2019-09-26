@@ -71,4 +71,14 @@ public class FCM: CAPPlugin, MessagingDelegate {
             }
         }
     }
+    
+    @objc func deleteInstance(_ call: CAPPluginCall) {
+        InstanceID.instanceID().deleteID { error in
+            if let error = error {
+                call.error("Cant delete Firebase Instance ID", error)
+            } else {
+                call.success();
+            }
+        }
+    }
 }

@@ -43,6 +43,11 @@
       "src": "android"
     }
   },
+  "contributors" : [{
+    "name": "Daniel Pereira",
+    "email": "daniel.prr.azevedo@gmail.com",
+    "url": "https://github.com/danielprrazevedo"
+  }],
   "repository": {
     "type": "git",
     "url": "https://github.com/stewwan/capacitor-fcm"

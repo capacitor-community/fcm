@@ -4,21 +4,43 @@ import { FCMProtocol } from './definitions';
 const { FCMPlugin } = Plugins;
 
 export class FCM implements FCMProtocol {
-  subscribeTo(options: { topic: string }) {
-    console.log(123, FCMPlugin);
+
+  /**
+   * Subscribe to fcm topic
+   * @param options 
+   */
+  subscribeTo(options: { topic: string }): Promise<{ message: string }> {
     return FCMPlugin.subscribeTo({ topic: options.topic });
   }
-  unsubscribeFrom(options: { topic: string }) {
+
+  /**
+   * Unsubscribe from fcm topic
+   * @param options 
+   */
+  unsubscribeFrom(options: { topic: string }): Promise<{ message: string }> {
     return FCMPlugin.unsubscribeFrom({ topic: options.topic });
   }
-  getToken() {
+
+  /**
+   * Get fcm token to eventually use from a serve
+   * 
+   * Recommended to use this instead of 
+   * @usage
+   * ```typescript
+   * PushNotifications.addListener("registration", (token) => {
+   *   console.log(token.data);
+   * });
+   * ``` 
+   * because the native capacitor method, for apple, returns the APN's token
+   */
+  getToken(): Promise<{ token: string }> {
     return FCMPlugin.getToken();
   }
 
   /**
-   * only androidy
+   * Remove local fcm instance completely
    */
-  deleteInstance() {
+  deleteInstance(): Promise<any> {
     return FCMPlugin.deleteInstance();
   }
 }
