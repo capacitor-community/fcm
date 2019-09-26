@@ -4,29 +4,17 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.1.0](https://github.com/stewwan/capacitor-fcm/compare/v0.0.7...v0.1.0) (2019-09-26)
 
-
 ### Bug Fixes
 
-* **ios:** plugin not working on Case-Sensitive file system ([1deb869](https://github.com/stewwan/capacitor-fcm/commit/1deb869))
-
-
-
-### [0.0.10](https://github.com/stewwan/capacitor-fcm/compare/v0.0.9...v0.0.10) (2019-09-24)
+- **ios:** plugin not working on Case-Sensitive file system ([1deb869](https://github.com/stewwan/capacitor-fcm/commit/1deb869))
 
 ### Features
 
+- **ios:** add deleteInstance() ([e2c8e10](https://github.com/stewwan/capacitor-fcm/commit/e2c8e10))
+
+### Docs
+
 - **FCM:** update README docs ([b5391a6](https://github.com/stewwan/capacitor-fcm/commit/b5391a6))
-- **ios:** add to deleteInstance() ([e2c8e10](https://github.com/stewwan/capacitor-fcm/commit/e2c8e10))
-
-
-### [0.0.9](https://github.com/stewwan/capacitor-fcm/compare/v0.0.7...v0.0.9) (2019-09-23)
-
-
-### Bug Fixes
-
-* **ios:** plugin not working on Case-Sensitive file system ([1deb869](https://github.com/stewwan/capacitor-fcm/commit/1deb869))
-
-
 
 <a name="0.0.7"></a>
 
