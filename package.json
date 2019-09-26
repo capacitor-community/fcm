@@ -1,6 +1,6 @@
 {
   "name": "capacitor-fcm",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Brings Firebase Cloud Messaging features to Capacitor",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -43,11 +43,13 @@
       "src": "android"
     }
   },
-  "contributors" : [{
-    "name": "Daniel Pereira",
-    "email": "daniel.prr.azevedo@gmail.com",
-    "url": "https://github.com/danielprrazevedo"
-  }],
+  "contributors": [
+    {
+      "name": "Daniel Pereira",
+      "email": "daniel.prr.azevedo@gmail.com",
+      "url": "https://github.com/danielprrazevedo"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/stewwan/capacitor-fcm"

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/stewwan/capacitor-fcm/compare/v0.0.7...v0.1.0) (2019-09-26)
+
+
+### Bug Fixes
+
+* **ios:** plugin not working on Case-Sensitive file system ([1deb869](https://github.com/stewwan/capacitor-fcm/commit/1deb869))
+
+
+
 ### [0.0.10](https://github.com/stewwan/capacitor-fcm/compare/v0.0.9...v0.0.10) (2019-09-24)
 
 ### Features
