@@ -1,6 +1,6 @@
 package io.stewan.capacitor.fcm;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
