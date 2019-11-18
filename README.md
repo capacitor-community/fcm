@@ -41,19 +41,17 @@ fcm
     .unsubscribeFrom({ topic: "test" })
     .then(r => alert(`unsubscribed from topic`))
     .catch(err => console.log(err));
-}
 
 /**
  * get remote token
  *
  * Recommended to use this instead of  PushNotifications.addListener("registration", ...);
  * because the native capacitor method, for apple, returns the APN's token
- */
+ **/
 fcm
     .getToken()
     .then(r => alert(`Token ${r.token}`))
     .catch(err => console.log(err));
-}
 
 //
 // remove local fcm instance completely
@@ -61,7 +59,6 @@ fcm
     .deleteInstance()
     .then(() => alert(`Token deleted`))
     .catch(err => console.log(err));
-}
 ```
 
 ## Add Google config files
