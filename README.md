@@ -18,47 +18,53 @@ Capacitor plugin to enable features from Firebase Cloud Messaging
 ## Usage
 
 ```ts
-import { FCM } from "capacitor-fcm";
-const fcm = new FCM();
-
 import { Plugins } from "@capacitor/core";
 const { PushNotifications } = Plugins;
 
 //
-// Subscribe to a specific topic
+// with type support
+import { FCM } from "capacitor-fcm";
+const fcm = new FCM();
+
+//
+// alternatively - without types
+const { FCMPlugin } = Plugins;
+
+//
+// external required step
+// register for push
 PushNotifications.register()
-    .then(_ => {
+  .then(() => {
+    //
+    // Subscribe to a specific topic
+    // you can use `FCMPlugin` or just `fcm`
     fcm
-        .subscribeTo({ topic: "test" })
-        .then(r => alert(`subscribed to topic`))
-        .catch(err => console.log(err));
-    })
-    .catch(err => alert(JSON.stringify(err)));
+      .subscribeTo({ topic: "test" })
+      .then(r => alert(`subscribed to topic`))
+      .catch(err => console.log(err));
+  })
+  .catch(err => alert(JSON.stringify(err)));
 
 //
 // Unsubscribe from a specific topic
 fcm
-    .unsubscribeFrom({ topic: "test" })
-    .then(r => alert(`unsubscribed from topic`))
-    .catch(err => console.log(err));
-
-/**
- * get remote token
- *
- * Recommended to use this instead of  PushNotifications.addListener("registration", ...);
- * because the native capacitor method, for apple, returns the APN's token
- **/
-fcm
-    .getToken()
-    .then(r => alert(`Token ${r.token}`))
-    .catch(err => console.log(err));
+  .unsubscribeFrom({ topic: "test" })
+  .then(() => alert(`unsubscribed from topic`))
+  .catch(err => console.log(err));
 
 //
-// remove local fcm instance completely
+// Get FCM token instead the APN one returned by Capacitor
 fcm
-    .deleteInstance()
-    .then(() => alert(`Token deleted`))
-    .catch(err => console.log(err));
+  .getToken()
+  .then(r => alert(`Token ${r.token}`))
+  .catch(err => console.log(err));
+
+//
+// Remove FCM instance
+fcm
+  .deleteInstance()
+  .then(() => alert(`Token deleted`))
+  .catch(err => console.log(err));
 ```
 
 ## Add Google config files
@@ -75,22 +81,33 @@ Download the `GoogleService-Info.plist` file. In Xcode right-click on the yellow
 
 Download the `google-services.json` file and copy it to `android/app/` directory of your capacitor project.
 
+### Certificate
+
+- apple
+  - create an app identifier (apple site)
+    - add push notifications
+    - add signing request (https://help.apple.com/developer-account/#/devbfa00fef7)
+    - generate an APN key and then note down the ID displayed. also download the p8 file (https://fluffy.es/p8-push-notification/)
+- firebase
+  - add the downloaded p8 file to firebase settings with noted key ID and the account team ID
+
 ## iOS setup
 
+- `sudo gem install cocoapods` _(once a time)_
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
-- `npm install --save capacitor-fcm`
 - `mkdir www && touch www/index.html`
-- `sudo gem install cocoapods`
 - `npx cap add ios`
-- `npx cap sync ios`
+- `npm install --save capacitor-fcm`
+- `npx cap sync ios` _(always do sync after a plugin install)_
 - `npx cap open ios`
-- sign your app at xcode (general tab)
-- enable remote notification capabilities
-- add `GoogleService-Info.plist` to the app folder in xcode
-- turn `swizzling` off on app's `info.plist`
+
+* sign your app at xcode (general tab)
+* enable remote notification capabilities
+* add `GoogleService-Info.plist` to the app folder in xcode
 
 ```
+// (optional) turn off `swizzling` in the `info.plist`
 <key>FirebaseAppDelegateProxyEnabled</key>
 <false/>
 ```
@@ -101,10 +118,10 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
-- `npm install --save capacitor-fcm`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
-- `npx cap sync android`
+- `npm install --save capacitor-fcm`
+- `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
 - `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
