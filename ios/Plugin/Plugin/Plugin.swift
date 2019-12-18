@@ -60,16 +60,10 @@ public class FCM: CAPPlugin, MessagingDelegate {
     }
     
     @objc func getToken(_ call: CAPPluginCall) {
-        InstanceID.instanceID().instanceID { (result, error) in
-            if let error = error {
-                call.error("Error", error)
-            } else if let result = result {
-                print(result.token)
-                call.success([
-                    "token": result.token
-                ])
-            }
-        }
+        let token = Messaging.messaging().fcmToken ?? ""
+            call.success([
+            "token": token
+        ])
     }
     
     @objc func deleteInstance(_ call: CAPPluginCall) {
