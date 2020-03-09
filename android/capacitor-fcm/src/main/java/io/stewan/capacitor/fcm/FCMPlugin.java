@@ -74,13 +74,21 @@ public class FCMPlugin extends Plugin {
 
     @PluginMethod()
     public void deleteInstance(final PluginCall call) {
-        try {
-            FirebaseInstanceId.getInstance().deleteInstanceId();
-            call.success();
-        } catch (IOException e) {
-            e.printStackTrace();
-            call.error("Cant delete Firebase Instance ID", e);
-        }
+        Runnable r = new Runnable() {
+            public void run() {
+                try {
+                    FirebaseInstanceId.getInstance().deleteInstanceId();
+                    call.success();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    call.error("Cant delete Firebase Instance ID", e);
+                }
+            }
+        };
+
+        // Run in background thread since `deleteInstanceId()` is a blocking request.
+        // See https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId#deleteInstanceId()
+        new Thread(r).start();
     }
 
     @PluginMethod()
