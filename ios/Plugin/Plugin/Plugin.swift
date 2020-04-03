@@ -75,4 +75,17 @@ public class FCM: CAPPlugin, MessagingDelegate {
             }
         }
     }
+
+    @objc func openSettings(_ call: CAPPluginCall) {
+      // UI calls must happen in main thread, so we dispatch to there.
+      DispatchQueue.main.async {
+        if let url = URL(string:UIApplication.openSettingsURLString) {
+          if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+          }
+        }
+      }
+
+      call.success()
+    }
 }
