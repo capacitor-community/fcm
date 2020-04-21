@@ -6,7 +6,7 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "clean": "del-cli dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
     "release:custom": "standard-version release --release-as x.x.x",
@@ -20,6 +20,7 @@
     "@capacitor/core": "latest"
   },
   "devDependencies": {
+    "del-cli": "^3.0.0",
     "typescript": "^2.6.2"
   },
   "files": [
