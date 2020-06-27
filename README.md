@@ -1,9 +1,46 @@
-# capacitor-fcm [![npm version](https://badge.fury.io/js/capacitor-fcm.svg)](https://badge.fury.io/js/capacitor-fcm)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
+<h3 align="center">Capacitor FCM</h3>
+<p align="center"><strong><code>@capacitor-community/fcm</code></strong></p>
+<p align="center">
+  Capacitor community plugin for enabling FCM capabilities
+</p>
 
-Capacitor plugin to enable features from Firebase Cloud Messaging
+<p align="center">
+  <img src="https://img.shields.io/maintenance/yes/2020?style=flat-square" />
+  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
+<br>
+  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-8-orange?style=flat-square" /></a><!-- ALL-CONTRIBUTORS-BADGE:END -->
+</p>
+
+## Maintainers
+
+| Maintainer     | GitHub                                                  | Social                                          |
+| -------------- | ------------------------------------------------------- | ----------------------------------------------- |
+| Stewan Silva   | [stewwan](https://github.com/stewwan)                   | [@StewanSilva](https://twitter.com/StewanSilva) |
+| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr)     |
+
+## Installation
+
+Using npm:
+
+```bash
+npm install @capacitor-community/fcm
+```
+
+Using yarn:
+
+```bash
+yarn add @capacitor-community/fcm
+```
+
+Sync native files:
+
+```bash
+npx cap sync
+```
 
 > ### Notice
 >
@@ -137,18 +174,7 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 ## Sample app
 
-https://github.com/capacitor-community/fcm-demo
-
-## You may also like
-
-- [capacitor-analytics](https://github.com/stewwan/capacitor-analytics)
-- [capacitor-crashlytics](https://github.com/stewwan/capacitor-crashlytics)
-- [capacitor-intercom](https://github.com/stewwan/capacitor-intercom)
-- [capacitor-twitter](https://github.com/stewwan/capacitor-twitter)
-
-Cheers 🍻
-
-Follow me [@Twitter](https://twitter.com/StewanSilva)
+https://github.com/stewwan/capacitor-fcm-demo
 
 ## License
 
@@ -178,6 +204,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
