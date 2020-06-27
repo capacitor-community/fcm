@@ -1,6 +1,6 @@
 
   Pod::Spec.new do |s|
-    s.name = 'CapacitorFcm'
+    s.name = 'CapacitorCommunityFcm'
     s.version = '1.0.0'
     s.summary = 'Enable Firebase Cloud Messaging features for Capacitor apps'
     s.license = 'MIT'
