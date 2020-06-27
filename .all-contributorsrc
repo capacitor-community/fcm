@@ -1,0 +1,25 @@
+{
+  "projectName": "@capacitor-community/fcm",
+  "projectOwner": "stewwan",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 75,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "stewwan",
+      "name": "Stew",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/719763?v=4",
+      "profile": "https://twitter.com/StewanSilva",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
