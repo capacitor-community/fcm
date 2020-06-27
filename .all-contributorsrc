@@ -1,6 +1,6 @@
 {
-  "projectName": "@capacitor-community/fcm",
-  "projectOwner": "stewwan",
+  "projectName": "fcm",
+  "projectOwner": "capacitor-community",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
