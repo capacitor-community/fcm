@@ -29,6 +29,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "priyankpat",
+      "name": "Priyank Patel",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5585797?v=4",
+      "profile": "http://priyankpatel.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
