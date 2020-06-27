@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/capacitor-community/fcm/compare/v1.0.3...v1.0.4) (2020-06-27)
+
+
+### Bug Fixes
+
+* contributor links ([73aa017](https://github.com/capacitor-community/fcm/commit/73aa01789a2356711542503c2b864653855c8a50))
+
 ### [1.0.3](https://github.com/capacitor-community/fcm/compare/v1.0.2...v1.0.3) (2020-06-27)
 
 ### [1.0.2](https://github.com/capacitor-community/fcm/compare/v1.0.1...v1.0.2) (2020-06-27)
