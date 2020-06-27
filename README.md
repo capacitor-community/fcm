@@ -1,6 +1,6 @@
 # capacitor-fcm [![npm version](https://badge.fury.io/js/capacitor-fcm.svg)](https://badge.fury.io/js/capacitor-fcm)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Capacitor plugin to enable features from Firebase Cloud Messaging
@@ -170,6 +170,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://lights0123.com/"><img src="https://avatars3.githubusercontent.com/u/3756309?v=4" width="75px;" alt=""/><br /><sub><b>Ben Schattinger</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=lights0123" title="Code">💻</a></td>
     <td align="center"><a href="https://binary.com.au/"><img src="https://avatars2.githubusercontent.com/u/175909?v=4" width="75px;" alt=""/><br /><sub><b>James Manners</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=jmannau" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/borodiliz"><img src="https://avatars3.githubusercontent.com/u/2467193?v=4" width="75px;" alt=""/><br /><sub><b>Borja Rodríguez</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=borodiliz" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Karrlllis"><img src="https://avatars1.githubusercontent.com/u/37330643?v=4" width="75px;" alt=""/><br /><sub><b>Karrlllis</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=Karrlllis" title="Documentation">📖</a></td>
   </tr>
 </table>
 
