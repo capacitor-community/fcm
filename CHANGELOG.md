@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/capacitor-community/fcm/compare/v1.0.0...v1.0.1) (2020-06-27)
+
+
+### Bug Fixes
+
+* **ios:** Fixing wrong Firebase dependency ([6e96be0](https://github.com/capacitor-community/fcm/commit/6e96be0388e67c28c389debd26a11ed3b145e4af))
+
 ## 1.0.0 (2020-06-27)
 
 
