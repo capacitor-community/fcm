@@ -1,6 +1,6 @@
 # capacitor-fcm [![npm version](https://badge.fury.io/js/capacitor-fcm.svg)](https://badge.fury.io/js/capacitor-fcm)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Capacitor plugin to enable features from Firebase Cloud Messaging
@@ -167,6 +167,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4" width="75px;" alt=""/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4" width="75px;" alt=""/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
     <td align="center"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4" width="75px;" alt=""/><br /><sub><b>Nikolas</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=nikoskip" title="Code">💻</a></td>
+    <td align="center"><a href="https://lights0123.com/"><img src="https://avatars3.githubusercontent.com/u/3756309?v=4" width="75px;" alt=""/><br /><sub><b>Ben Schattinger</b></sub></a><br /><a href="https://github.com/stewwan/@capacitor-community/fcm/commits?author=lights0123" title="Code">💻</a></td>
   </tr>
 </table>
 
