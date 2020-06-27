@@ -26,7 +26,7 @@
 
 ## Notice 🚀
 
-We're starting fresh under an official org. If you were using the previous npm package `capacitor-fcm`, please update your package.json to `@capacitor-community/fcm`. Check out [changelog](/CHANGELOG.md) for more info.
+We're starting fresh under an official org. If you were using the previous npm package `@capacitor-community/fcm`, please update your package.json to `@capacitor-community/fcm`. Check out [changelog](/CHANGELOG.md) for more info.
 
 ## Installation
 
@@ -69,7 +69,7 @@ const { PushNotifications } = Plugins;
 
 //
 // with type support
-import { FCM } from "capacitor-fcm";
+import { FCM } from "@capacitor-community/fcm";
 const fcm = new FCM();
 
 //
@@ -144,7 +144,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add ios`
-- `npm install --save capacitor-fcm`
+- `npm install --save @capacitor-community/fcm`
 - `npx cap sync ios` _(always do sync after a plugin install)_
 - `npx cap open ios`
 
@@ -166,7 +166,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
-- `npm install --save capacitor-fcm`
+- `npm install --save @capacitor-community/fcm`
 - `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
