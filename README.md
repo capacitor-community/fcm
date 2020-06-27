@@ -40,31 +40,31 @@ PushNotifications.register()
     // you can use `FCMPlugin` or just `fcm`
     fcm
       .subscribeTo({ topic: "test" })
-      .then(r => alert(`subscribed to topic`))
-      .catch(err => console.log(err));
+      .then((r) => alert(`subscribed to topic`))
+      .catch((err) => console.log(err));
   })
-  .catch(err => alert(JSON.stringify(err)));
+  .catch((err) => alert(JSON.stringify(err)));
 
 //
 // Unsubscribe from a specific topic
 fcm
   .unsubscribeFrom({ topic: "test" })
   .then(() => alert(`unsubscribed from topic`))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 //
 // Get FCM token instead the APN one returned by Capacitor
 fcm
   .getToken()
-  .then(r => alert(`Token ${r.token}`))
-  .catch(err => console.log(err));
+  .then((r) => alert(`Token ${r.token}`))
+  .catch((err) => console.log(err));
 
 //
 // Remove FCM instance
 fcm
   .deleteInstance()
   .then(() => alert(`Token deleted`))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 ```
 
 ## Add Google config files
@@ -134,7 +134,7 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 ## Sample app
 
-https://github.com/stewwan/capacitor-fcm-demo
+https://github.com/capacitor-community/fcm-demo
 
 ## You may also like
 
