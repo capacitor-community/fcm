@@ -64,12 +64,12 @@ npx cap sync
 ## Usage
 
 ```ts
-import { Plugins } from "@capacitor/core";
+import { Plugins } from '@capacitor/core';
 const { PushNotifications } = Plugins;
 
 //
 // with type support
-import { FCM } from "@capacitor-community/fcm";
+import { FCM } from '@capacitor-community/fcm';
 const fcm = new FCM();
 
 //
@@ -85,7 +85,7 @@ PushNotifications.register()
     // Subscribe to a specific topic
     // you can use `FCMPlugin` or just `fcm`
     fcm
-      .subscribeTo({ topic: "test" })
+      .subscribeTo({ topic: 'test' })
       .then((r) => alert(`subscribed to topic`))
       .catch((err) => console.log(err));
   })
@@ -94,7 +94,7 @@ PushNotifications.register()
 //
 // Unsubscribe from a specific topic
 fcm
-  .unsubscribeFrom({ topic: "test" })
+  .unsubscribeFrom({ topic: 'test' })
   .then(() => alert(`unsubscribed from topic`))
   .catch((err) => console.log(err));
 
@@ -172,7 +172,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - add `google-services.json` to your `android/app` folder
 - `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
-> on your `MainActivity.java` file add `import io.stewan.capacitor.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
+> on your `MainActivity.java` file add `import com.getcapacitor.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
 
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
