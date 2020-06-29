@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/capacitor-community/fcm/compare/v1.0.5...v1.0.6) (2020-06-29)
+
+
+### Features
+
+* add example ([1304c79](https://github.com/capacitor-community/fcm/commit/1304c79cf60c772589f2421ff292eac77480887b))
+
+
+### Bug Fixes
+
+* **android:** java path ([70a0c9a](https://github.com/capacitor-community/fcm/commit/70a0c9a952f19210e6c237fe9489ddeb3562acc2))
+
 ### [1.0.5](https://github.com/capacitor-community/fcm/compare/v1.0.4...v1.0.5) (2020-06-29)
 
 ### Bug Fixes
