@@ -23,7 +23,7 @@
     "@angular/platform-browser": "^7.2.2",
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
-    "@capacitor-community/fcm": "file:../@capacitor-community-fcm",
+    "@capacitor-community/fcm": "^1.0.6",
     "@capacitor/android": "latest",
     "@capacitor/cli": "latest",
     "@capacitor/core": "latest",
