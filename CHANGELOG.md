@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## Breaking change
 
-- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.fcm.FCMPlugin` in your `MainActivity.java`
+- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.community.fcm.FCMPlugin` in your `MainActivity.java`
 
 ### [1.0.4](https://github.com/capacitor-community/fcm/compare/v1.0.3...v1.0.4) (2020-06-27)
 

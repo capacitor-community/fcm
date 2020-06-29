@@ -1,4 +1,4 @@
-package com.getcapacitor.fcm;
+package com.getcapacitor.community.fcm;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
