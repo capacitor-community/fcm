@@ -4,25 +4,23 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.6](https://github.com/capacitor-community/fcm/compare/v1.0.5...v1.0.6) (2020-06-29)
 
+## Breaking change
+
+- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.community.fcm.FCMPlugin` in your `MainActivity.java`
 
 ### Features
 
-* add example ([1304c79](https://github.com/capacitor-community/fcm/commit/1304c79cf60c772589f2421ff292eac77480887b))
-
+- add example ([1304c79](https://github.com/capacitor-community/fcm/commit/1304c79cf60c772589f2421ff292eac77480887b))
 
 ### Bug Fixes
 
-* **android:** java path ([70a0c9a](https://github.com/capacitor-community/fcm/commit/70a0c9a952f19210e6c237fe9489ddeb3562acc2))
+- **android:** java path ([70a0c9a](https://github.com/capacitor-community/fcm/commit/70a0c9a952f19210e6c237fe9489ddeb3562acc2))
 
 ### [1.0.5](https://github.com/capacitor-community/fcm/compare/v1.0.4...v1.0.5) (2020-06-29)
 
 ### Bug Fixes
 
 - **android:** refactoring to match community standards. closes [#43](https://github.com/capacitor-community/fcm/issues/43) [#44](https://github.com/capacitor-community/fcm/issues/44) ([11761b8](https://github.com/capacitor-community/fcm/commit/11761b8f024422f89288f940c8a6a146b3ff9a5e))
-
-## Breaking change
-
-- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.community.fcm.FCMPlugin` in your `MainActivity.java`
 
 ### [1.0.4](https://github.com/capacitor-community/fcm/compare/v1.0.3...v1.0.4) (2020-06-27)
 
