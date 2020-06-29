@@ -1,0 +1,16 @@
+{
+  "appId": "io.capacitor.starter",
+  "appName": "capacitor-fcm-demo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}

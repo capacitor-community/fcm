@@ -1,0 +1,7 @@
+{
+  "name": "capacitor-fcm-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
