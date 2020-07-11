@@ -60,10 +60,15 @@ public class FCM: CAPPlugin, MessagingDelegate {
     }
     
     @objc func getToken(_ call: CAPPluginCall) {
-        let token = Messaging.messaging().fcmToken ?? ""
-            call.success([
-            "token": token
-        ])
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                call.error("Failed to get instance FirebaseID", error)
+            } else {
+                call.success([
+                    "token": result?.token
+                ]);
+            }
+        }
     }
     
     @objc func deleteInstance(_ call: CAPPluginCall) {
