@@ -93,6 +93,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "josh-m-sharpe",
+      "name": "Josh Sharpe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/39473?v=4",
+      "profile": "https://github.com/josh-m-sharpe",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5
