@@ -2,12 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.0.8](https://github.com/capacitor-community/fcm/compare/v1.0.7...v1.0.8) (2020-07-11)
+## Breaking change
 
+- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.community.fcm.FCMPlugin` in your `MainActivity.java`
+
+### [1.0.8](https://github.com/capacitor-community/fcm/compare/v1.0.7...v1.0.8) (2020-07-11)
 
 ### Bug Fixes
 
-* **ios:** get token using instanceID ([f62d33c](https://github.com/capacitor-community/fcm/commit/f62d33cb77e9ce071e2effa71063a740efd9d406))
+- **ios:** get token using instanceID ([f62d33c](https://github.com/capacitor-community/fcm/commit/f62d33cb77e9ce071e2effa71063a740efd9d406))
 
 ### [1.0.7](https://github.com/capacitor-community/fcm/compare/v1.0.6...v1.0.7) (2020-07-02)
 
