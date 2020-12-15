@@ -80,4 +80,16 @@ public class FCM: CAPPlugin, MessagingDelegate {
             }
         }
     }
+
+    @objc func setAutoInitEnabled(_ call: CAPPluginCall) {
+        let enabled: Bool = call.getBool("enabled") ?? false
+        Messaging.messaging().isAutoInitEnabled = enabled;
+        call.success();
+    }
+    
+    @objc func isAutoInitEnabled(_ call: CAPPluginCall) {
+        call.success([
+            "enabled": Messaging.messaging().isAutoInitEnabled
+        ]);
+    }
 }

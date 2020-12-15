@@ -77,4 +77,19 @@ public class FCMPlugin extends Plugin {
         });
         FirebaseInstanceId.getInstance().getInstanceId().addOnFailureListener(e -> call.error("Failed to get instance FirebaseID", e));
     }
+
+    @PluginMethod()
+    public void setAutoInitEnabled(final PluginCall call) {
+        final boolean enabled = call.getBoolean("enabled", false);
+        FirebaseMessaging.getInstance().setAutoInitEnabled(enabled);
+        call.success();
+    }
+
+    @PluginMethod()
+    public void isAutoInitEnabled(final PluginCall call) {
+        final boolean enabled = FirebaseMessaging.getInstance().isAutoInitEnabled();
+        JSObject data = new JSObject();
+        data.put("enabled", enabled);
+        call.success(data);
+    }
 }
