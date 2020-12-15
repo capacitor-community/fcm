@@ -121,7 +121,7 @@ fcm
   .then(() => alert(`Auto init enabled`))
 
 //
-// Checkthe auto initialization status
+// Check the auto initialization status
 fcm
   .isAutoInitEnabled()
   .then((r) => {
