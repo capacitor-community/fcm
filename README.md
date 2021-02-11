@@ -60,7 +60,7 @@ npx cap sync
 | `unsubscribeFrom`    | unsubscribe from fcm topic                    | ios/android |
 | `getToken`           | get fcm token to eventually use from a server | ios/android |
 | `deleteInstance`     | remove local fcm instance completely          | ios/android |
-| `setAutoInitEnabled` | enable the auto initialization of the library | ios/android |
+| `setAutoInit`        | enable the auto initialization of the library | ios/android |
 | `isAutoInitEnabled`  | check whether auto initialization is enabled  | ios/android |
 
 ## Usage
@@ -117,7 +117,7 @@ fcm
 //
 // Enable the auto initialization of the library
 fcm
-  .setAutoInitEnabled({ enabled: true })
+  .setAutoInit({ enabled: true })
   .then(() => alert(`Auto init enabled`))
 
 //

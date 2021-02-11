@@ -79,7 +79,7 @@ public class FCMPlugin extends Plugin {
     }
 
     @PluginMethod()
-    public void setAutoInitEnabled(final PluginCall call) {
+    public void setAutoInit(final PluginCall call) {
         final boolean enabled = call.getBoolean("enabled", false);
         FirebaseMessaging.getInstance().setAutoInitEnabled(enabled);
         call.success();

@@ -81,7 +81,7 @@ public class FCM: CAPPlugin, MessagingDelegate {
         }
     }
 
-    @objc func setAutoInitEnabled(_ call: CAPPluginCall) {
+    @objc func setAutoInit(_ call: CAPPluginCall) {
         let enabled: Bool = call.getBool("enabled") ?? false
         Messaging.messaging().isAutoInitEnabled = enabled;
         call.success();

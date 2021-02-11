@@ -48,8 +48,8 @@ export class FCM implements FCMProtocol {
    * Enabled/disabled auto initialization.
    * @param options
    */
-  setAutoInitEnabled(options: { enabled: boolean }): Promise<void> {
-    return FCMPlugin.setAutoInitEnabled({ enabled: options.enabled });
+  setAutoInit(options: { enabled: boolean }): Promise<void> {
+    return FCMPlugin.setAutoInit({ enabled: options.enabled });
   }
 
   /**
