@@ -54,12 +54,14 @@ npx cap sync
 
 ## API
 
-| method            | info                                          | platform    |
-| ----------------- | --------------------------------------------- | ----------- |
-| `subscribeTo`     | subscribe to fcm topic                        | ios/android |
-| `unsubscribeFrom` | unsubscribe from fcm topic                    | ios/android |
-| `getToken`        | get fcm token to eventually use from a server | ios/android |
-| `deleteInstance`  | remove local fcm instance completely          | ios/android |
+| method               | info                                          | platform    |
+| -------------------- | --------------------------------------------- | ----------- |
+| `subscribeTo`        | subscribe to fcm topic                        | ios/android |
+| `unsubscribeFrom`    | unsubscribe from fcm topic                    | ios/android |
+| `getToken`           | get fcm token to eventually use from a server | ios/android |
+| `deleteInstance`     | remove local fcm instance completely          | ios/android |
+| `setAutoInit`        | enable the auto initialization of the library | ios/android |
+| `isAutoInitEnabled`  | check whether auto initialization is enabled  | ios/android |
 
 ## Usage
 
@@ -111,6 +113,20 @@ fcm
   .deleteInstance()
   .then(() => alert(`Token deleted`))
   .catch((err) => console.log(err));
+
+//
+// Enable the auto initialization of the library
+fcm
+  .setAutoInit({ enabled: true })
+  .then(() => alert(`Auto init enabled`))
+
+//
+// Check the auto initialization status
+fcm
+  .isAutoInitEnabled()
+  .then((r) => {
+    console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'))
+  })
 ```
 
 ## Add Google config files
@@ -160,6 +176,10 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 > Tip: every time you change a native code you may need to clean up the cache (Product > Clean build folder) and then run the app again.
 
+### Prevent auto initialization
+
+If you need to implement opt-in behavior, you can disable the auto initialization of the library by following the [Firebase docs](https://firebase.google.com/docs/cloud-messaging/ios/client#prevent_auto_initialization).
+
 ## Android setup
 
 - `ionic start my-cap-app --capacitor`
@@ -177,6 +197,10 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
 > Tip: every time you change a native code you may need to clean up the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
+
+### Prevent auto initialization
+
+If you need to implement opt-in behavior, you can disable the auto initialization of the library by following the [Firebase docs](https://firebase.google.com/docs/cloud-messaging/android/client#prevent-auto-init).
 
 ## Example
 

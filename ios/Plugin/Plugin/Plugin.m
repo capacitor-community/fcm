@@ -8,4 +8,6 @@ CAP_PLUGIN(FCM, "FCMPlugin",
            CAP_PLUGIN_METHOD(unsubscribeFrom, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(getToken, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(deleteInstance, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(setAutoInit, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(isAutoInitEnabled, CAPPluginReturnPromise);
 )

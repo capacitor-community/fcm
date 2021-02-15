@@ -43,4 +43,19 @@ export class FCM implements FCMProtocol {
   deleteInstance(): Promise<any> {
     return FCMPlugin.deleteInstance();
   }
+
+  /**
+   * Enabled/disabled auto initialization.
+   * @param options
+   */
+  setAutoInit(options: { enabled: boolean }): Promise<void> {
+    return FCMPlugin.setAutoInit({ enabled: options.enabled });
+  }
+
+  /**
+   * Retrieve the auto initialization status.
+   */
+  isAutoInitEnabled(): Promise<{ enabled: boolean }> {
+    return FCMPlugin.isAutoInitEnabled();
+  }
 }

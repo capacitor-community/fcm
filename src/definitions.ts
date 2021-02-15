@@ -9,4 +9,6 @@ export interface FCMProtocol {
   unsubscribeFrom(options: { topic: string }): Promise<{ message: string }>;
   getToken(): Promise<{ token: string }>;
   deleteInstance(): Promise<boolean>;
+  setAutoInit(options: { enabled: boolean }): Promise<void>;
+  isAutoInitEnabled(): Promise<{ enabled: boolean }>;
 }
