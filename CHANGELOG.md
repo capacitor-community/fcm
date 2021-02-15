@@ -2,9 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## Breaking change
-
-- Android: replace `io.stewan.capacitor.fcm.FCMPlugin` to `com.getcapacitor.community.fcm.FCMPlugin` in your `MainActivity.java`
+## [1.1.0](https://github.com/capacitor-community/fcm/compare/v1.0.8...v1.1.0) (2021-02-15)
 
 ### [1.0.8](https://github.com/capacitor-community/fcm/compare/v1.0.7...v1.0.8) (2020-07-11)
 
