@@ -12,17 +12,17 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-10-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-11-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
 
 ## Maintainers
 
-| Maintainer     | GitHub                                                  | Social                                          |
-| -------------- | ------------------------------------------------------- | ----------------------------------------------- |
-| Stewan Silva   | [stewwan](https://github.com/stewwan)                   | [@StewanSilva](https://twitter.com/StewanSilva) |
-| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr)     |
+| Maintainer     | GitHub                                                  | Social                                      |
+| -------------- | ------------------------------------------------------- | ------------------------------------------- |
+| Stewan Silva   | [stewones](https://github.com/stewones)                 | [@stewones](https://twitter.com/stewones)   |
+| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr) |
 
 ## Notice 🚀
 
@@ -54,14 +54,14 @@ npx cap sync
 
 ## API
 
-| method               | info                                          | platform    |
-| -------------------- | --------------------------------------------- | ----------- |
-| `subscribeTo`        | subscribe to fcm topic                        | ios/android |
-| `unsubscribeFrom`    | unsubscribe from fcm topic                    | ios/android |
-| `getToken`           | get fcm token to eventually use from a server | ios/android |
-| `deleteInstance`     | remove local fcm instance completely          | ios/android |
-| `setAutoInit`        | enable the auto initialization of the library | ios/android |
-| `isAutoInitEnabled`  | check whether auto initialization is enabled  | ios/android |
+| method              | info                                          | platform    |
+| ------------------- | --------------------------------------------- | ----------- |
+| `subscribeTo`       | subscribe to fcm topic                        | ios/android |
+| `unsubscribeFrom`   | unsubscribe from fcm topic                    | ios/android |
+| `getToken`          | get fcm token to eventually use from a server | ios/android |
+| `deleteInstance`    | remove local fcm instance completely          | ios/android |
+| `setAutoInit`       | enable the auto initialization of the library | ios/android |
+| `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
 
 ## Usage
 
@@ -116,17 +116,13 @@ fcm
 
 //
 // Enable the auto initialization of the library
-fcm
-  .setAutoInit({ enabled: true })
-  .then(() => alert(`Auto init enabled`))
+fcm.setAutoInit({ enabled: true }).then(() => alert(`Auto init enabled`));
 
 //
 // Check the auto initialization status
-fcm
-  .isAutoInitEnabled()
-  .then((r) => {
-    console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'))
-  })
+fcm.isAutoInitEnabled().then((r) => {
+  console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'));
+});
 ```
 
 ## Add Google config files
@@ -231,6 +227,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Karrlllis"><img src="https://avatars1.githubusercontent.com/u/37330643?v=4" width="75px;" alt=""/><br /><sub><b>Karrlllis</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=Karrlllis" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jamesmah"><img src="https://avatars0.githubusercontent.com/u/21981049?v=4" width="75px;" alt=""/><br /><sub><b>jamesmah</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=jamesmah" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/josh-m-sharpe"><img src="https://avatars3.githubusercontent.com/u/39473?v=4" width="75px;" alt=""/><br /><sub><b>Josh Sharpe</b></sub></a><br /><a href="#maintenance-josh-m-sharpe" title="Maintenance">🚧</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/msimkunas"><img src="https://avatars.githubusercontent.com/u/9675250?v=4" width="75px;" alt=""/><br /><sub><b>Mantas Šimkūnas</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Documentation">📖</a></td>
   </tr>
 </table>
 

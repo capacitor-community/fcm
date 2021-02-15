@@ -102,6 +102,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "msimkunas",
+      "name": "Mantas Šimkūnas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9675250?v=4",
+      "profile": "https://github.com/msimkunas",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 5
