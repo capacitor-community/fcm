@@ -6,8 +6,8 @@ target 'Plugin' do
   use_frameworks!
 
   # Pods for IonicRunner
-  pod 'FirebaseCore', '~> 7.9.0'
-  pod 'Firebase/Messaging', '~> 7.9.0'
+  pod 'FirebaseCore', '~> 7.11.0'
+  pod 'Firebase/Messaging', '~> 7.11.0'
   pod 'Capacitor'
 end
 
