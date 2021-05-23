@@ -12,7 +12,7 @@
   "badgeTemplate": "<a href=\"#contributors\"><img src=\"https://img.shields.io/badge/all%20contributors-<%= contributors.length %>-orange?style=flat-square\" /></a>",
   "contributors": [
     {
-      "login": "stewwan",
+      "login": "stewones",
       "name": "Stew",
       "avatar_url": "https://avatars1.githubusercontent.com/u/719763?v=4",
       "profile": "https://twitter.com/StewanSilva",

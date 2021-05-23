@@ -215,7 +215,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://twitter.com/StewanSilva"><img src="https://avatars1.githubusercontent.com/u/719763?v=4" width="75px;" alt=""/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewwan" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewwan" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/StewanSilva"><img src="https://avatars1.githubusercontent.com/u/719763?v=4" width="75px;" alt=""/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4" width="75px;" alt=""/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4" width="75px;" alt=""/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
     <td align="center"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4" width="75px;" alt=""/><br /><sub><b>Nikolas</b></sub></a><br /><a href="#maintenance-nikoskip" title="Maintenance">🚧</a></td>
@@ -235,6 +235,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
