@@ -112,6 +112,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "iOlivier",
+      "name": "Olivier Overstraete",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12254953?v=4",
+      "profile": "https://github.com/iOlivier",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5
