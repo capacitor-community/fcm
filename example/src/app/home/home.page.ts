@@ -27,7 +27,6 @@ export class HomePage implements OnInit {
       // alert(JSON.stringify(data));
       console.log(data);
     });
-    PushNotifications.register().then(() => alert(`registered for push`));
     PushNotifications.addListener(
       'pushNotificationReceived',
       (notification: PushNotification) => {
@@ -36,6 +35,9 @@ export class HomePage implements OnInit {
           this.notifications.push(notification);
         });
       }
+    );
+    PushNotifications.requestPermission().then((response) =>
+      PushNotifications.register().then(() => alert(`registered for push`))
     );
   }
 
