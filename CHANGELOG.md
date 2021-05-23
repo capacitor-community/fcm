@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/capacitor-community/fcm/compare/v1.1.0...v1.1.1) (2021-05-23)
+
+
+### Bug Fixes
+
+* no need of Firebase/Core ([38f186b](https://github.com/capacitor-community/fcm/commit/38f186b09525ee681360b4437ed38c1cc57cb981))
+* tweak demo for capacitor v2 ([397409c](https://github.com/capacitor-community/fcm/commit/397409c85881a81fa953f8d51746528ae045587b))
+
 ## [1.1.0](https://github.com/capacitor-community/fcm/compare/v1.0.8...v1.1.0) (2021-02-15)
 
 ### [1.0.8](https://github.com/capacitor-community/fcm/compare/v1.0.7...v1.0.8) (2020-07-11)
