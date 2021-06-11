@@ -8,10 +8,23 @@ export class FCMWeb extends WebPlugin implements FCMPlugin {
       platforms: ['web']
     });
   }
-
-  async echo(options: { value: string }): Promise<{value: string}> {
-    console.log('ECHO', options);
-    return Promise.resolve({ value: options.value });
+  subscribeTo(_options: { topic: string; }): Promise<{ message: string; }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+  unsubscribeFrom(_options: { topic: string; }): Promise<{ message: string; }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+  getToken(): Promise<{ token: string; }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+  deleteInstance(): Promise<boolean> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+  setAutoInit(_options: { enabled: boolean; }): Promise<void> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+  isAutoInitEnabled(): Promise<{ enabled: boolean; }> {
+    throw this.unimplemented('Not implemented on web.');
   }
 }
 
