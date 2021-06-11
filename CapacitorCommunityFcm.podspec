@@ -8,7 +8,7 @@
     s.author = 'Stewan Silva'
     s.source = { :git => 'https://github.com/capacitor-community/fcm', :tag => s.version.to_s }
     s.source_files = 'ios/Plugin/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
-    s.ios.deployment_target  = '11.0'
+    s.ios.deployment_target  = '12.0'
     s.dependency 'Capacitor'
     s.dependency 'FirebaseMessaging'
     s.static_framework = true
