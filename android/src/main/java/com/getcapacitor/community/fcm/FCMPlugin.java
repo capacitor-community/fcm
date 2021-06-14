@@ -5,6 +5,7 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -16,7 +17,9 @@ import java.io.IOException;
  *
  * Created by Stewan Silva on 1/23/19.
  */
-@NativePlugin()
+@CapacitorPlugin(
+        name = "FCM"
+)
 public class FCMPlugin extends Plugin {
 
     @PluginMethod()
@@ -29,9 +32,9 @@ public class FCMPlugin extends Plugin {
                 .addOnSuccessListener(aVoid -> {
                     JSObject ret = new JSObject();
                     ret.put("message", "Subscribed to topic " + topicName);
-                    call.success(ret);
+                    call.resolve(ret);
                 })
-                .addOnFailureListener(e -> call.error("Cant subscribe to topic" + topicName, e));
+                .addOnFailureListener(e -> call.reject("Cant subscribe to topic" + topicName, e));
 
     }
 
@@ -45,9 +48,9 @@ public class FCMPlugin extends Plugin {
                 .addOnSuccessListener(aVoid -> {
                     JSObject ret = new JSObject();
                     ret.put("message", "Unsubscribed from topic " + topicName);
-                    call.success(ret);
+                    call.resolve(ret);
                 })
-                .addOnFailureListener(e -> call.error("Cant unsubscribe from topic" + topicName, e));
+                .addOnFailureListener(e -> call.reject("Cant unsubscribe from topic" + topicName, e));
 
     }
 
@@ -56,10 +59,10 @@ public class FCMPlugin extends Plugin {
         Runnable r = () -> {
             try {
                 FirebaseInstanceId.getInstance().deleteInstanceId();
-                call.success();
+                call.resolve();
             } catch (IOException e) {
                 e.printStackTrace();
-                call.error("Cant delete Firebase Instance ID", e);
+                call.reject("Cant delete Firebase Instance ID", e);
             }
         };
 
@@ -73,16 +76,16 @@ public class FCMPlugin extends Plugin {
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(getActivity(), instanceIdResult -> {
             JSObject data = new JSObject();
             data.put("token", instanceIdResult.getToken());
-            call.success(data);
+            call.resolve(data);
         });
-        FirebaseInstanceId.getInstance().getInstanceId().addOnFailureListener(e -> call.error("Failed to get instance FirebaseID", e));
+        FirebaseInstanceId.getInstance().getInstanceId().addOnFailureListener(e -> call.reject("Failed to get instance FirebaseID", e));
     }
 
     @PluginMethod()
     public void setAutoInit(final PluginCall call) {
         final boolean enabled = call.getBoolean("enabled", false);
         FirebaseMessaging.getInstance().setAutoInitEnabled(enabled);
-        call.success();
+        call.resolve();
     }
 
     @PluginMethod()
@@ -90,6 +93,6 @@ public class FCMPlugin extends Plugin {
         final boolean enabled = FirebaseMessaging.getInstance().isAutoInitEnabled();
         JSObject data = new JSObject();
         data.put("enabled", enabled);
-        call.success(data);
+        call.resolve(data);
     }
 }

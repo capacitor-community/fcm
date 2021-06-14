@@ -37,9 +37,9 @@ public class FCM: CAPPlugin, MessagingDelegate {
             // print("Subscribed to weather topic")
             if ((error) != nil) {
                 print("ERROR while trying to subscribe topic \(topicName)")
-                call.error("Can't subscribe to topic \(topicName)")
+                call.reject("Can't subscribe to topic \(topicName)")
             }else{
-                call.success([
+                call.resolve([
                     "message": "subscribed to topic \(topicName)"
                     ])
             }
@@ -50,9 +50,9 @@ public class FCM: CAPPlugin, MessagingDelegate {
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().unsubscribe(fromTopic: topicName) { error in
             if ((error) != nil) {
-                call.error("Can't unsubscribe from topic \(topicName)")
+                call.reject("Can't unsubscribe from topic \(topicName)")
             }else{
-                call.success([
+                call.resolve([
                     "message": "unsubscribed from topic \(topicName)"
                     ])
             }
@@ -62,9 +62,9 @@ public class FCM: CAPPlugin, MessagingDelegate {
     @objc func getToken(_ call: CAPPluginCall) {
         InstanceID.instanceID().instanceID { (result, error) in
             if let error = error {
-                call.error("Failed to get instance FirebaseID", error)
+                call.reject("Failed to get instance FirebaseID", error.localizedDescription)
             } else {
-                call.success([
+                call.resolve([
                     "token": result?.token
                 ]);
             }
@@ -74,9 +74,9 @@ public class FCM: CAPPlugin, MessagingDelegate {
     @objc func deleteInstance(_ call: CAPPluginCall) {
         InstanceID.instanceID().deleteID { error in
             if let error = error {
-                call.error("Cant delete Firebase Instance ID", error)
+                call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
             } else {
-                call.success();
+                call.resolve();
             }
         }
     }
@@ -84,11 +84,11 @@ public class FCM: CAPPlugin, MessagingDelegate {
     @objc func setAutoInit(_ call: CAPPluginCall) {
         let enabled: Bool = call.getBool("enabled") ?? false
         Messaging.messaging().isAutoInitEnabled = enabled;
-        call.success();
+        call.resolve();
     }
     
     @objc func isAutoInitEnabled(_ call: CAPPluginCall) {
-        call.success([
+        call.resolve([
             "enabled": Messaging.messaging().isAutoInitEnabled
         ]);
     }
