@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/capacitor-community/fcm/compare/v1.1.2...v2.0.0) (2021-06-14)
+
+
+### Bug Fixes
+
+* upgrade to firebase 8 and fix plugin for capacitor 3 ([3317a8e](https://github.com/capacitor-community/fcm/commit/3317a8e9824b2dbf7d179410a31d7494669f0c51))
+
 ### [1.1.2](https://github.com/capacitor-community/fcm/compare/v1.1.0...v1.1.2) (2021-06-11)
 
 
