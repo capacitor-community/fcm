@@ -66,61 +66,39 @@ npx cap sync
 ## Usage
 
 ```ts
-import { Plugins } from '@capacitor/core';
-const { PushNotifications } = Plugins;
-
-//
-// with type support
 import { FCM } from '@capacitor-community/fcm';
-const fcm = new FCM();
+import { PushNotifications } from '@capacitor/push-notifications';
 
-//
-// alternatively - without types
-const { FCMPlugin } = Plugins;
-
-//
 // external required step
 // register for push
-PushNotifications.register()
-  .then(() => {
-    //
-    // Subscribe to a specific topic
-    // you can use `FCMPlugin` or just `fcm`
-    fcm
-      .subscribeTo({ topic: 'test' })
-      .then((r) => alert(`subscribed to topic`))
-      .catch((err) => console.log(err));
-  })
-  .catch((err) => alert(JSON.stringify(err)));
+await PushNotifications.requestPermissions();
+await PushNotifications.register();
 
-//
+// now you can subscribe to a specific topic
+FCM.subscribeTo({ topic: 'test' })
+  .then((r) => alert(`subscribed to topic`))
+  .catch((err) => console.log(err));
+
 // Unsubscribe from a specific topic
-fcm
-  .unsubscribeFrom({ topic: 'test' })
+FCM.unsubscribeFrom({ topic: 'test' })
   .then(() => alert(`unsubscribed from topic`))
   .catch((err) => console.log(err));
 
-//
 // Get FCM token instead the APN one returned by Capacitor
-fcm
-  .getToken()
+FCM.getToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
 
-//
 // Remove FCM instance
-fcm
-  .deleteInstance()
+FCM.deleteInstance()
   .then(() => alert(`Token deleted`))
   .catch((err) => console.log(err));
 
-//
 // Enable the auto initialization of the library
-fcm.setAutoInit({ enabled: true }).then(() => alert(`Auto init enabled`));
+FCM.setAutoInit({ enabled: true }).then(() => alert(`Auto init enabled`));
 
-//
 // Check the auto initialization status
-fcm.isAutoInitEnabled().then((r) => {
+FCM.isAutoInitEnabled().then((r) => {
   console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'));
 });
 ```

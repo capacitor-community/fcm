@@ -2,10 +2,9 @@ import Foundation
 import Capacitor
 import UserNotifications
 
-import FirebaseMessaging
 import FirebaseCore
-import FirebaseInstanceID
-
+import FirebaseMessaging
+import FirebaseInstallations
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -13,15 +12,15 @@ import FirebaseInstanceID
  *
  * Created by Stewan Silva on 1/23/19.
  */
-@objc(FCM)
-public class FCM: CAPPlugin, MessagingDelegate {
+@objc(FCMPlugin)
+public class FCMPlugin: CAPPlugin, MessagingDelegate {
     
     public override func load() {
         if (FirebaseApp.app() == nil) {
           FirebaseApp.configure();
         }
         Messaging.messaging().delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: Notification.Name(CAPNotifications.DidRegisterForRemoteNotificationsWithDeviceToken.name()), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: .capacitorDidRegisterForRemoteNotifications, object: nil)
     }
     
     @objc func didRegisterWithToken(notification: NSNotification) {
@@ -60,25 +59,27 @@ public class FCM: CAPPlugin, MessagingDelegate {
     }
     
     @objc func getToken(_ call: CAPPluginCall) {
-        InstanceID.instanceID().instanceID { (result, error) in
-            if let error = error {
-                call.reject("Failed to get instance FirebaseID", error.localizedDescription)
-            } else {
-                call.resolve([
-                    "token": result?.token
-                ]);
-            }
+      Messaging.messaging().token { token, error in
+        if let error = error {
+          print("Error fetching FCM registration token: \(error)")
+          call.reject("Failed to get instance FirebaseID", error.localizedDescription)
+        } else if let token = token {
+          print("FCM registration token: \(token)")
+          call.resolve([
+              "token": token
+          ]);
         }
+      }
     }
     
     @objc func deleteInstance(_ call: CAPPluginCall) {
-        InstanceID.instanceID().deleteID { error in
-            if let error = error {
-                call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
-            } else {
-                call.resolve();
-            }
+      Installations.installations().delete { error in
+        if let error = error {
+          print("Error deleting installation: \(error)")
+          call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
         }
+        call.resolve();
+      }
     }
 
     @objc func setAutoInit(_ call: CAPPluginCall) {

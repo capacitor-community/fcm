@@ -1,15 +1,19 @@
+require 'json'
 
-  Pod::Spec.new do |s|
-    s.name = 'CapacitorCommunityFcm'
-    s.version = '1.1.1'
-    s.summary = 'Enable Firebase Cloud Messaging features for Capacitor apps'
-    s.license = 'MIT'
-    s.homepage = 'https://github.com/capacitor-community/fcm'
-    s.author = 'Stewan Silva'
-    s.source = { :git => 'https://github.com/capacitor-community/fcm', :tag => s.version.to_s }
-    s.source_files = 'ios/Plugin/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
-    s.ios.deployment_target  = '12.0'
-    s.dependency 'Capacitor'
-    s.dependency 'FirebaseMessaging'
-    s.static_framework = true
-  end
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+
+Pod::Spec.new do |s|
+  s.name = 'CapacitorCommunityFcm'
+  s.version = package['version']
+  s.summary = package['description']
+  s.license = package['license']
+  s.homepage = package['repository']['url']
+  s.author = package['author']
+  s.source = { git: package['repository']['url'], tag: s.version.to_s }
+  s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
+  s.ios.deployment_target = '12.0'
+  s.dependency 'Capacitor'
+  s.dependency 'Firebase/Messaging'
+  s.swift_version = '5.1'
+  s.static_framework = true
+end
