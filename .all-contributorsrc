@@ -121,6 +121,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "hemangsk",
+      "name": "Hemang Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13018570?v=4",
+      "profile": "https://hemang.dev/",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5
