@@ -5,6 +5,7 @@
 App/build
 App/Pods
 App/public
+App/App/public
 xcuserdata
 
 # Cordova plugins for Capacitor

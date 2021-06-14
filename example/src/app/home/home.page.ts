@@ -1,10 +1,10 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Plugins, PushNotification } from '@capacitor/core';
-
-const { PushNotifications } = Plugins;
 import { Platform } from '@ionic/angular';
+import {
+  PushNotifications,
+  PushNotificationSchema,
+} from '@capacitor/push-notifications';
 import { FCM } from '@capacitor-community/fcm';
-const fcm = new FCM();
 
 @Component({
   selector: 'app-home',
@@ -14,9 +14,8 @@ const fcm = new FCM();
 export class HomePage implements OnInit {
   session: any;
 
-  notifications: PushNotification[] = [];
-  //
-  // move to fcm demo
+  notifications: PushNotificationSchema[] = [];
+
   topicName = 'super-awesome-topic';
   remoteToken: string;
 
@@ -29,25 +28,23 @@ export class HomePage implements OnInit {
     });
     PushNotifications.addListener(
       'pushNotificationReceived',
-      (notification: PushNotification) => {
+      (notification: PushNotificationSchema) => {
         console.log('notification ' + JSON.stringify(notification));
         this.zone.run(() => {
           this.notifications.push(notification);
         });
       }
     );
-    PushNotifications.requestPermission().then((response) =>
+    PushNotifications.requestPermissions().then((response) =>
       PushNotifications.register().then(() => alert(`registered for push`))
     );
   }
 
-  //
   // move to fcm demo
   subscribeTo() {
     PushNotifications.register()
       .then((_) => {
-        fcm
-          .subscribeTo({ topic: this.topicName })
+        FCM.subscribeTo({ topic: this.topicName })
           .then((r) => alert(`subscribed to topic ${this.topicName}`))
           .catch((err) => console.log(err));
       })
@@ -55,16 +52,17 @@ export class HomePage implements OnInit {
   }
 
   unsubscribeFrom() {
-    fcm
-      .unsubscribeFrom({ topic: 'test' })
+    FCM.unsubscribeFrom({ topic: this.topicName })
       .then((r) => alert(`unsubscribed from topic ${this.topicName}`))
       .catch((err) => console.log(err));
-    if (this.platform.is('android')) fcm.deleteInstance();
+
+    if (this.platform.is('android')) {
+      FCM.deleteInstance();
+    }
   }
 
   getToken() {
-    fcm
-      .getToken()
+    FCM.getToken()
       .then((result) => {
         this.remoteToken = result.token;
       })

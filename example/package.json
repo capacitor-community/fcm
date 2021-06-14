@@ -16,18 +16,19 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^7.2.2",
-    "@angular/core": "^7.2.2",
-    "@angular/forms": "^7.2.2",
+    "@angular/common": "^12.0.4",
+    "@angular/core": "^12.0.4",
+    "@angular/forms": "^12.0.4",
     "@angular/http": "^7.2.2",
-    "@angular/platform-browser": "^7.2.2",
-    "@angular/platform-browser-dynamic": "^7.2.2",
-    "@angular/router": "^7.2.2",
+    "@angular/platform-browser": "^12.0.4",
+    "@angular/platform-browser-dynamic": "^12.0.4",
+    "@angular/router": "^12.0.4",
     "@capacitor-community/fcm": "../",
-    "@capacitor/android": "2.4.7",
-    "@capacitor/cli": "2.4.7",
-    "@capacitor/core": "2.4.7",
-    "@capacitor/ios": "2.4.7",
+    "@capacitor/android": "^3.0.1",
+    "@capacitor/cli": "^3.0.1",
+    "@capacitor/core": "^3.0.1",
+    "@capacitor/ios": "^3.0.1",
+    "@capacitor/push-notifications": "^1.0.1",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
@@ -35,7 +36,7 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.29"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
@@ -43,9 +44,9 @@
     "@angular-devkit/core": "~7.3.8",
     "@angular-devkit/schematics": "~7.3.8",
     "@angular/cli": "~7.3.8",
-    "@angular/compiler": "~7.2.2",
-    "@angular/compiler-cli": "~7.2.2",
-    "@angular/language-service": "~7.2.2",
+    "@angular/compiler": "~12.0.4",
+    "@angular/compiler-cli": "~12.0.4",
+    "@angular/language-service": "~12.0.4",
     "@ionic/angular-toolkit": "~1.5.1",
     "@types/node": "~12.0.0",
     "@types/jasmine": "~2.8.8",
@@ -61,7 +62,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~8.1.0",
     "tslint": "~5.17.0",
-    "typescript": "~3.1.6"
+    "typescript": "~4.2.4"
   },
   "description": "An Ionic project"
 }
