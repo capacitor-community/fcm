@@ -145,7 +145,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 ```
 // (optional) turn off `swizzling` in the `info.plist`
 <key>FirebaseAppDelegateProxyEnabled</key>
-<false/>
+<string>NO</string>
 ```
 
 > Tip: every time you change a native code you may need to clean up the cache (Product > Clean build folder) and then run the app again.
