@@ -11,7 +11,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 /**
  * Please read the Capacitor Android Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/android
- * <p>
+ *
  * Created by Stewan Silva on 1/23/19.
  */
 @CapacitorPlugin(
