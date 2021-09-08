@@ -14,10 +14,11 @@ import FirebaseInstallations
  */
 @objc(FCMPlugin)
 public class FCMPlugin: CAPPlugin, MessagingDelegate {
+    var fcmToken: String?;
     
     public override func load() {
         if (FirebaseApp.app() == nil) {
-          FirebaseApp.configure();
+            FirebaseApp.configure();
         }
         Messaging.messaging().delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: .capacitorDidRegisterForRemoteNotifications, object: nil)
@@ -40,7 +41,7 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
             }else{
                 call.resolve([
                     "message": "subscribed to topic \(topicName)"
-                    ])
+                ])
             }
         }
     }
@@ -53,35 +54,43 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
             }else{
                 call.resolve([
                     "message": "unsubscribed from topic \(topicName)"
-                    ])
+                ])
             }
         }
     }
     
     @objc func getToken(_ call: CAPPluginCall) {
-      Messaging.messaging().token { token, error in
-        if let error = error {
-          print("Error fetching FCM registration token: \(error)")
-          call.reject("Failed to get instance FirebaseID", error.localizedDescription)
-        } else if let token = token {
-          print("FCM registration token: \(token)")
-          call.resolve([
-              "token": token
-          ]);
+        if (fcmToken ?? "").isEmpty {
+            Messaging.messaging().token { token, error in
+                if let error = error {
+                    print("Error fetching FCM registration token: \(error)")
+                    call.reject("Failed to get instance FirebaseID", error.localizedDescription)
+                } else if let token = token {
+                    print("FCM registration token: \(token)");
+                    self.fcmToken = token;
+                    call.resolve([
+                        "token": token
+                    ]);
+                }
+            }
         }
-      }
+        else{
+            call.resolve([
+                "token": fcmToken
+            ])
+        }
     }
     
     @objc func deleteInstance(_ call: CAPPluginCall) {
-      Installations.installations().delete { error in
-        if let error = error {
-          print("Error deleting installation: \(error)")
-          call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
+        Installations.installations().delete { error in
+            if let error = error {
+                print("Error deleting installation: \(error)")
+                call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
+            }
+            call.resolve();
         }
-        call.resolve();
-      }
     }
-
+    
     @objc func setAutoInit(_ call: CAPPluginCall) {
         let enabled: Bool = call.getBool("enabled") ?? false
         Messaging.messaging().isAutoInitEnabled = enabled;
@@ -92,5 +101,9 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
         call.resolve([
             "enabled": Messaging.messaging().isAutoInitEnabled
         ]);
+    }
+    
+    @objc public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        self.fcmToken = fcmToken;
     }
 }
