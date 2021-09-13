@@ -1,10 +1,12 @@
 dist/
 node_modules/
-sensitive/
+
 
 Pods
 Build
 *.iml
 .idea
+.DS_Store
 
 package-lock.json
+sensitive
