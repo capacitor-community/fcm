@@ -66,8 +66,8 @@ npx cap sync
 ## Usage
 
 ```ts
-import { FCM } from '@capacitor-community/fcm';
-import { PushNotifications } from '@capacitor/push-notifications';
+import { FCM } from "@capacitor-community/fcm";
+import { PushNotifications } from "@capacitor/push-notifications";
 
 // external required step
 // register for push
@@ -75,12 +75,12 @@ await PushNotifications.requestPermissions();
 await PushNotifications.register();
 
 // now you can subscribe to a specific topic
-FCM.subscribeTo({ topic: 'test' })
+FCM.subscribeTo({ topic: "test" })
   .then((r) => alert(`subscribed to topic`))
   .catch((err) => console.log(err));
 
 // Unsubscribe from a specific topic
-FCM.unsubscribeFrom({ topic: 'test' })
+FCM.unsubscribeFrom({ topic: "test" })
   .then(() => alert(`unsubscribed from topic`))
   .catch((err) => console.log(err));
 
@@ -99,7 +99,7 @@ FCM.setAutoInit({ enabled: true }).then(() => alert(`Auto init enabled`));
 
 // Check the auto initialization status
 FCM.isAutoInitEnabled().then((r) => {
-  console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'));
+  console.log("Auto init is " + (r.enabled ? "enabled" : "disabled"));
 });
 ```
 
@@ -193,7 +193,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://twitter.com/StewanSilva"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/stewones"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
     <td align="center"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Nikolas</b></sub></a><br /><a href="#maintenance-nikoskip" title="Maintenance">🚧</a></td>
