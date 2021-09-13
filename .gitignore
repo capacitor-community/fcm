@@ -1,16 +1,14 @@
 dist/
 node_modules/
-
+sensitive/
 
 Pods
 Build
 *.iml
 .idea
+.DS_Store
 
 package-lock.json
-
-# Mac OS X
-*.DS_Store
 
 # Xcode
 *.pbxuser
