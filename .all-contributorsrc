@@ -140,6 +140,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "halomademeapc",
+      "name": "Alex Griffith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5904472?v=4",
+      "profile": "https://www.alexgriffith.me/",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5
