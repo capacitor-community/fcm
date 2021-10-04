@@ -1,32 +1,32 @@
 PODS:
-  - Capacitor (3.0.1):
+  - Capacitor (3.2.4):
     - CapacitorCordova
-  - CapacitorCommunityFcm (2.0.0):
+  - CapacitorCommunityFcm (2.0.1):
     - Capacitor
     - Firebase/Messaging
-  - CapacitorCordova (3.0.1)
-  - CapacitorPushNotifications (1.0.1):
+  - CapacitorCordova (3.2.4)
+  - CapacitorPushNotifications (1.0.4):
     - Capacitor
-  - Firebase/CoreOnly (8.7.0):
-    - FirebaseCore (= 8.7.0)
-  - Firebase/Messaging (8.7.0):
+  - Firebase/CoreOnly (8.8.0):
+    - FirebaseCore (= 8.8.0)
+  - Firebase/Messaging (8.8.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 8.7.0)
-  - FirebaseCore (8.7.0):
+    - FirebaseMessaging (~> 8.8.0)
+  - FirebaseCore (8.8.0):
     - FirebaseCoreDiagnostics (~> 8.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/Logger (~> 7.4)
-  - FirebaseCoreDiagnostics (8.7.0):
+  - FirebaseCoreDiagnostics (8.8.0):
     - GoogleDataTransport (~> 9.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/Logger (~> 7.4)
     - nanopb (~> 2.30908.0)
-  - FirebaseInstallations (8.7.0):
+  - FirebaseInstallations (8.8.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (< 3.0, >= 1.2)
-  - FirebaseMessaging (8.7.0):
+  - FirebaseMessaging (8.8.0):
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
     - GoogleDataTransport (~> 9.0)
@@ -92,15 +92,15 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/push-notifications"
 
 SPEC CHECKSUMS:
-  Capacitor: 92088387144015b95e369bd7840e8ef28b8fe9f3
-  CapacitorCommunityFcm: ab77ba69873b6c1dc80a3d80f927bc55e7a0c99e
-  CapacitorCordova: 624ae0d33d61b554eda6823da8ea6c3e5170f646
-  CapacitorPushNotifications: b8bb8083aad2036426773ae303bbf1555385c537
-  Firebase: bc9325d5ee2041524bac78a5213d0e530c651309
-  FirebaseCore: f4804c1d3f4bbbefc88904d15653038f2c99ddf7
-  FirebaseCoreDiagnostics: b63732f581a1c6a453ec7241f9ab60b3a5bd3450
-  FirebaseInstallations: ede6fb72bb6337914e5888b399271259d0c4910c
-  FirebaseMessaging: 93227dd71d7888e200baef65043f81acb2b6596e
+  Capacitor: 07f746722420584674243fe6bb2e02d243a02a08
+  CapacitorCommunityFcm: fcfe299721eaff77b07fa10afa11d349a1ffc16e
+  CapacitorCordova: 16f118e79d7c20eb659565b1ed9133e2b730f747
+  CapacitorPushNotifications: d06d6267cd165b430ef75d1f3a6d0bb2872099ec
+  Firebase: 629510f1a9ddb235f3a7c5c8ceb23ba887f0f814
+  FirebaseCore: 98b29e3828f0a53651c363937a7f7d92a19f1ba2
+  FirebaseCoreDiagnostics: fe77f42da6329d6d83d21fd9d621a6b704413bfc
+  FirebaseInstallations: 2563cb18a723ef9c6ef18318a49519b75dce613c
+  FirebaseMessaging: 419b5c9d84f294a753c6501d8cfb9ced1ce37304
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
