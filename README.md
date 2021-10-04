@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-15-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -212,6 +212,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://hemang.dev/"><img src="https://avatars.githubusercontent.com/u/13018570?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Hemang Kumar</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=hemangsk" title="Code">💻</a> <a href="#maintenance-hemangsk" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/mesqueeb"><img src="https://avatars.githubusercontent.com/u/3253920?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Luca Ban</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=mesqueeb" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.alexgriffith.me/"><img src="https://avatars.githubusercontent.com/u/5904472?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Alex Griffith</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=halomademeapc" title="Code">💻</a> <a href="#maintenance-halomademeapc" title="Maintenance">🚧</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/bdirito"><img src="https://avatars.githubusercontent.com/u/8117238?v=4?s=75" width="75px;" alt=""/><br /><sub><b>bdirito</b></sub></a><br /><a href="#maintenance-bdirito" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
