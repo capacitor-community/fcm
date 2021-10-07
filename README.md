@@ -166,8 +166,6 @@ If you need to implement opt-in behavior, you can disable the auto initializatio
 - add `google-services.json` to your `android/app` folder
 - `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
-> on your `MainActivity.java` file add `import com.getcapacitor.community.fcm.FCMPlugin;` and then inside the init callback `add(FCMPlugin.class);`
-
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
 > Tip: every time you change a native code you may need to clean up the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
