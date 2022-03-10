@@ -1,10 +1,14 @@
 package com.getcapacitor.community.fcm;
 
+import androidx.annotation.NonNull;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -63,12 +67,20 @@ public class FCMPlugin extends Plugin {
 
     @PluginMethod()
     public void getToken(final PluginCall call) {
-        FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
-            JSObject data = new JSObject();
-            data.put("token", instanceIdResult.getToken());
-            call.resolve(data);
-        });
-        FirebaseInstallations.getInstance().getId().addOnFailureListener(e -> call.reject("Failed to get instance FirebaseID", e));
+        FirebaseMessaging.getInstance().getToken()
+            .addOnCompleteListener(new OnCompleteListener<String>() {
+                @Override
+                public void onComplete(@NonNull Task<String> task) {
+                    if (!task.isSuccessful()) {
+                        call.reject("Failed to get Firebase instance token");
+                        return;
+                    }
+
+                    JSObject data = new JSObject();
+                    data.put("token", task.getResult());
+                    call.resolve(data);
+                }
+            });
     }
 
     @PluginMethod()
