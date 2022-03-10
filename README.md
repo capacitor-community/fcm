@@ -17,7 +17,34 @@
 
 </p>
 
-## Maintainers
+## The Fork
+
+This is a fork of the original @capacitor-community/fcm plugin for Ionic Capacitor.
+It was created since the changes in the Firebase classes and APIs broke our push implementations @anynines.
+
+Previously you retrieved the Firebase registration token for both iOS and Android by calling 
+```
+FirebaseInstances.getInstance().getToken()...
+```
+which returns a 163-character string.
+Since the update, on Android that will now return a Firebase Instance Installation token in JWT format. That might still work fine depending on your architecture, but can be a major problem with custom push systems built to target individual devices and users.
+
+So to get your actual registration token you now have to call
+```
+FirebaseMessaging.getInstance().getToken()...
+```
+and override the OnCompleteListener as described in [the Firebase docs](https://firebase.google.com/docs/cloud-messaging/android/first-message?authuser=0&hl=de#java_1) (which we more or less threw in).
+
+If you are facing a similar problem, pleasw feel free to try our solution.
+
+
+## Maintainers - fork
+
+| Maintainer     | GitHub                                                  | Web                                         |
+| -------------- | ------------------------------------------------------- | ------------------------------------------- |
+| anynines gmbh  | [@anynines](https://github.com/anynines)                | https://anynines.com                        |
+
+## Maintainers - original
 
 | Maintainer     | GitHub                                                  | Social                                      |
 | -------------- | ------------------------------------------------------- | ------------------------------------------- |
