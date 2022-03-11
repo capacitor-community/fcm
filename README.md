@@ -1,16 +1,16 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
-<h3 align="center">Capacitor FCM</h3>
-<p align="center"><strong><code>@capacitor-community/fcm</code></strong></p>
+<h3 align="center">Anynines Capacitor FCM</h3>
+<p align="center"><strong><code>@anynines/fcm</code></strong></p>
 <p align="center">
   Capacitor community plugin for enabling FCM capabilities
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@anynines/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@anynines/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@anynines/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -19,8 +19,9 @@
 
 ## The Fork
 
-This is a fork of the original @capacitor-community/fcm plugin for Ionic Capacitor.
-It was created since the changes in the Firebase classes and APIs broke our push implementations @anynines.
+This is a fork of the original `@capacitor-community/fcm` plugin for Ionic Capacitor, which can be found [here](https://www.npmjs.com/package/@capacitor-community/fcm). Kudos to the original contibutors.
+
+The fork was created since the changes in the Firebase classes and APIs broke our push implementations @anynines.
 
 Previously you retrieved the Firebase registration token for both iOS and Android by calling 
 ```
@@ -33,16 +34,16 @@ So to get your actual registration token you now have to call
 ```
 FirebaseMessaging.getInstance().getToken()...
 ```
-and override the OnCompleteListener as described in [the Firebase docs](https://firebase.google.com/docs/cloud-messaging/android/first-message?authuser=0&hl=de#java_1) (which we more or less threw in).
+...and then override the OnCompleteListener as described in [the Firebase docs](https://firebase.google.com/docs/cloud-messaging/android/first-message?authuser=0&hl=de#java_1) (we more or less threw that in and added the JS callback).
 
-If you are facing a similar problem, pleasw feel free to try our solution.
+If you are facing a similar problem, please feel free to try our solution.
 
 
 ## Maintainers - fork
 
 | Maintainer     | GitHub                                                  | Web                                         |
 | -------------- | ------------------------------------------------------- | ------------------------------------------- |
-| anynines gmbh  | [@anynines](https://github.com/anynines)                | https://anynines.com                        |
+| anynines GmbH  | [@anynines](https://github.com/anynines)                | https://anynines.com                        |
 
 ## Maintainers - original
 
@@ -51,22 +52,19 @@ If you are facing a similar problem, pleasw feel free to try our solution.
 | Stewan Silva   | [stewones](https://github.com/stewones)                 | [@stewones](https://twitter.com/stewones)   |
 | Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr) |
 
-## Notice 🚀
-
-We're starting fresh under an official org. If you were using the previous npm package `capacitor-fcm`, please update your package.json to `@capacitor-community/fcm`. Check out [changelog](/CHANGELOG.md) for more info.
 
 ## Installation
 
 Using npm:
 
 ```bash
-npm install @capacitor-community/fcm
+npm install @anynines/fcm
 ```
 
 Using yarn:
 
 ```bash
-yarn add @capacitor-community/fcm
+yarn add @anynines/fcm
 ```
 
 Sync native files:
@@ -93,7 +91,7 @@ npx cap sync
 ## Usage
 
 ```ts
-import { FCM } from "@capacitor-community/fcm";
+import { FCM } from "@anynines/fcm";
 import { PushNotifications } from "@capacitor/push-notifications";
 
 // external required step
@@ -161,7 +159,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add ios`
-- `npm install --save @capacitor-community/fcm`
+- `npm install --save @anynines/fcm`
 - `npx cap sync ios` _(always do sync after a plugin install)_
 - `npx cap open ios`
 
@@ -187,7 +185,7 @@ If you need to implement opt-in behavior, you can disable the auto initializatio
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
-- `npm install --save @capacitor-community/fcm`
+- `npm install --save @anynines/fcm`
 - `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
