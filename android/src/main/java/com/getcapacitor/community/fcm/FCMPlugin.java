@@ -96,7 +96,7 @@ public class FCMPlugin extends Plugin {
     @PluginMethod()
     public void sendMessage(final PluginCall call) {
       try {
-        RemoteMessage.Builder builder = new RemoteMessage.Builder(call.getString('receiver'));
+        RemoteMessage.Builder builder = new RemoteMessage.Builder(call.getString("receiver"))
           .setTtl(5)
           .setMessageId(UUID.randomUUID().toString());
 
