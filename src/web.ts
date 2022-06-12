@@ -26,6 +26,16 @@ export class FCMWeb extends WebPlugin implements FCMPlugin {
   isAutoInitEnabled(): Promise<{ enabled: boolean; }> {
     throw this.unimplemented('Not implemented on web.');
   }
+  sendMessage( _options: {
+        receiver: string,
+        data: object,
+    }): Promise<{
+        message: string;
+    }> {
+    throw this.unimplemented('Not implemented on web.');
+ }
+
+
 }
 
 const FCM = new FCMWeb();
