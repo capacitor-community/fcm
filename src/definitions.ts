@@ -40,4 +40,17 @@ export interface FCMPlugin {
    * Retrieve the auto initialization status.
    */
   isAutoInitEnabled(): Promise<{ enabled: boolean }>;
+
+  /**
+   * Sends a message to a FCM receiver
+   * @param receiver a fcm receiver (eg: '12345679012@fcm.googleapis.com')
+   * @para data JSON object with data to send
+   */
+  sendMessage(options: {
+        receiver: string,
+        data: object,
+    }): Promise<{
+        message: string;
+    }>;
+
 }

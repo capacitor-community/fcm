@@ -7,6 +7,13 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
+import com.getcapacitor.Logger;
+
+import org.json.JSONObject;
+
+import java.util.Iterator;
+import java.util.UUID;
 
 /**
  * Please read the Capacitor Android Plugin Development Guide
@@ -63,14 +70,14 @@ public class FCMPlugin extends Plugin {
 
     @PluginMethod()
     public void getToken(final PluginCall call) {
-        FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
             JSObject data = new JSObject();
-            data.put("token", instanceIdResult.getToken());
+            data.put("token", tokenResult.getResult());
             call.resolve(data);
         });
-        FirebaseInstallations.getInstance().getId().addOnFailureListener(e -> call.reject("Failed to get instance FirebaseID", e));
+        FirebaseMessaging.getInstance().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
     }
-
+    
     @PluginMethod()
     public void setAutoInit(final PluginCall call) {
         final boolean enabled = call.getBoolean("enabled", false);
@@ -85,4 +92,31 @@ public class FCMPlugin extends Plugin {
         data.put("enabled", enabled);
         call.resolve(data);
     }
+
+    @PluginMethod()
+    public void sendMessage(final PluginCall call) {
+      try {
+        RemoteMessage.Builder builder = new RemoteMessage.Builder(call.getString('receiver'));
+          .setTtl(5)
+          .setMessageId(UUID.randomUUID().toString());
+
+        JSONObject data = call.getObject("data");
+        Iterator<String> keys = data.keys();
+        while (keys.hasNext()) {
+          String key = keys.next();
+          String val = data.getString(key);
+          builder.addData(key,val);
+        }
+
+        RemoteMessage message = builder.build();
+        FirebaseMessaging.getInstance().send(message);
+        JSObject ret = new JSObject();
+        ret.put("message", message.toString());
+        call.resolve(ret);
+      } catch (Exception e) {
+        e.printStackTrace();
+        call.reject("Error sending message", e);
+      }
+    }
+
 }
