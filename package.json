@@ -14,17 +14,18 @@
     "release:minor": "standard-version release --release-as minor",
     "release:major": "standard-version release --release-as major",
     "contributors:add": "all-contributors add",
-    "contributors:gen": "all-contributors generate"
+    "contributors:gen": "all-contributors generate",
+    "prepare": "npm run build"
   },
   "author": "Stewan Silva",
   "license": "MIT",
   "dependencies": {
-    "@capacitor/core": "^3.0.1"
+    "@capacitor/core": "^4.0.0-beta.2"
   },
   "devDependencies": {
-    "@capacitor/android": "^3.0.1",
-    "@capacitor/cli": "^3.0.1",
-    "@capacitor/ios": "^3.0.1",
+    "@capacitor/android": "^4.0.0-beta.2",
+    "@capacitor/cli": "^4.0.0-beta.2",
+    "@capacitor/ios": "^4.0.0-beta.2",
     "all-contributors-cli": "^6.16.0",
     "typescript": "~4.0.0"
   },
