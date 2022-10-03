@@ -159,6 +159,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mineminemine",
+      "name": "Ryan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17585549?v=4",
+      "profile": "https://github.com/mineminemine",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5

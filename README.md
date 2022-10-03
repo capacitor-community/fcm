@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-17-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -213,6 +213,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/bdirito"><img src="https://avatars.githubusercontent.com/u/8117238?v=4?s=75" width="75px;" alt=""/><br /><sub><b>bdirito</b></sub></a><br /><a href="#maintenance-bdirito" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/mineminemine"><img src="https://avatars.githubusercontent.com/u/17585549?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Ryan</b></sub></a><br /><a href="#maintenance-mineminemine" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
