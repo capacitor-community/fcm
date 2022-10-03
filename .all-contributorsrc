@@ -186,6 +186,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "flogy",
+      "name": "Florian Gyger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1215256?v=4",
+      "profile": "https://floriangyger.ch/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 5

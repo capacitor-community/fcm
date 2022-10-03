@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-19-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-20-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -216,6 +216,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mineminemine"><img src="https://avatars.githubusercontent.com/u/17585549?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Ryan</b></sub></a><br /><a href="#maintenance-mineminemine" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/josuelmm"><img src="https://avatars.githubusercontent.com/u/12968781?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Josué Moreno</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=josuelmm" title="Code">💻</a></td>
     <td align="center"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars.githubusercontent.com/u/8985933?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Marc</b></sub></a><br /><a href="#maintenance-marcjulian" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://floriangyger.ch/"><img src="https://avatars.githubusercontent.com/u/1215256?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Florian Gyger</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=flogy" title="Code">💻</a></td>
   </tr>
 </table>
 
