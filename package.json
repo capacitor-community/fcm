@@ -6,6 +6,30 @@
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "del-cli dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "release:patch": "standard-version release --release-as patch",
+    "release:minor": "standard-version release --release-as minor",
+    "release:major": "standard-version release --release-as major",
+    "contributors:add": "all-contributors add",
+    "contributors:gen": "all-contributors generate"
+  },
+  "author": "Stewan Silva",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "^3.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^3.0.1",
+    "@capacitor/cli": "^3.0.1",
+    "@capacitor/ios": "^3.0.1",
+    "all-contributors-cli": "^6.16.0",
+    "del-cli": "^3.0.0",
+    "typescript": "~4.0.0"
+  },
   "files": [
     "android/src/main",
     "android/build.gradle",
