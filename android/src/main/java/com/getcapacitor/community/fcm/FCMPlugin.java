@@ -71,6 +71,17 @@ public class FCMPlugin extends Plugin {
 
         FirebaseMessaging.getInstance().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
     }
+    
+    @PluginMethod()
+    public void refreshToken(final PluginCall call) {
+        FirebaseMessaging.getInstance().deleteToken();
+        FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
+            JSObject data = new JSObject();
+            data.put("token", instanceIdResult.getToken());
+            call.resolve(data);
+        });
+        FirebaseInstallations.getInstance().getId().addOnFailureListener(e -> call.reject("Failed to get instance FirebaseID", e));
+    }
 
     @PluginMethod()
     public void setAutoInit(final PluginCall call) {
