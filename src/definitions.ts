@@ -25,6 +25,21 @@ export interface FCMPlugin {
    */
   getToken(): Promise<{ token: string }>;
 
+  
+  /**
+   * Refresh fcm token to eventually use from a serve
+   *
+   * Recommended to use this instead of
+   * @usage
+   * ```typescript
+   * PushNotifications.addListener("registration", (token) => {
+   *   console.log(token.data);
+   * });
+   * ```
+   * because the native capacitor method, for apple, returns the APN's token
+   */
+   refreshToken(): Promise<{ token: string }>;
+
   /**
    * Remove local fcm instance completely
    */

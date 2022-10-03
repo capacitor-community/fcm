@@ -159,6 +159,42 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mineminemine",
+      "name": "Ryan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17585549?v=4",
+      "profile": "https://github.com/mineminemine",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "josuelmm",
+      "name": "Josué Moreno",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12968781?v=4",
+      "profile": "https://github.com/josuelmm",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marcjulian",
+      "name": "Marc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8985933?v=4",
+      "profile": "https://marcjulian.de/?ref=github",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "flogy",
+      "name": "Florian Gyger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1215256?v=4",
+      "profile": "https://floriangyger.ch/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 5

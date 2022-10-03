@@ -6,23 +6,39 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-20-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
 
+## Sponsors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://intenseloop.com">
+      <img src="https://static.intenseloop.com/assets/logo-512x512.png" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://intenseloop.com">
+      Intenseloop
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Maintainers
 
-| Maintainer     | GitHub                                                  | Social                                      |
-| -------------- | ------------------------------------------------------- | ------------------------------------------- |
-| Stewan Silva   | [stewones](https://github.com/stewones)                 | [@stewones](https://twitter.com/stewones)   |
-| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr) |
+| Maintainer   | GitHub                                  | Social                                    |
+| ------------ | --------------------------------------- | ----------------------------------------- |
+| Stewan Silva | [stewones](https://github.com/stewones) | [@stewones](https://twitter.com/stewones) |
 
 ## Notice 🚀
 
@@ -213,6 +229,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/bdirito"><img src="https://avatars.githubusercontent.com/u/8117238?v=4?s=75" width="75px;" alt=""/><br /><sub><b>bdirito</b></sub></a><br /><a href="#maintenance-bdirito" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/mineminemine"><img src="https://avatars.githubusercontent.com/u/17585549?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Ryan</b></sub></a><br /><a href="#maintenance-mineminemine" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/josuelmm"><img src="https://avatars.githubusercontent.com/u/12968781?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Josué Moreno</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=josuelmm" title="Code">💻</a></td>
+    <td align="center"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars.githubusercontent.com/u/8985933?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Marc</b></sub></a><br /><a href="#maintenance-marcjulian" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://floriangyger.ch/"><img src="https://avatars.githubusercontent.com/u/1215256?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Florian Gyger</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=flogy" title="Code">💻</a></td>
   </tr>
 </table>
 

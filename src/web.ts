@@ -5,25 +5,35 @@ export class FCMWeb extends WebPlugin implements FCMPlugin {
   constructor() {
     super({
       name: 'FCM',
-      platforms: ['web']
+      platforms: ['web'],
     });
   }
-  subscribeTo(_options: { topic: string; }): Promise<{ message: string; }> {
+
+  subscribeTo(_options: { topic: string }): Promise<{ message: string }> {
     throw this.unimplemented('Not implemented on web.');
   }
-  unsubscribeFrom(_options: { topic: string; }): Promise<{ message: string; }> {
+
+  unsubscribeFrom(_options: { topic: string }): Promise<{ message: string }> {
     throw this.unimplemented('Not implemented on web.');
   }
-  getToken(): Promise<{ token: string; }> {
+
+  getToken(): Promise<{ token: string }> {
     throw this.unimplemented('Not implemented on web.');
   }
+
   deleteInstance(): Promise<boolean> {
     throw this.unimplemented('Not implemented on web.');
   }
-  setAutoInit(_options: { enabled: boolean; }): Promise<void> {
+
+  setAutoInit(_options: { enabled: boolean }): Promise<void> {
     throw this.unimplemented('Not implemented on web.');
   }
-  isAutoInitEnabled(): Promise<{ enabled: boolean; }> {
+
+  isAutoInitEnabled(): Promise<{ enabled: boolean }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  refreshToken(): Promise<{ token: string }> {
     throw this.unimplemented('Not implemented on web.');
   }
   sendMessage( _options: {
