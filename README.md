@@ -180,7 +180,6 @@ If you need to implement opt-in behavior, you can disable the auto initializatio
 - `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
-- `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
