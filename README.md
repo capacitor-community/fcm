@@ -186,6 +186,12 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 > Tip: every time you change a native code you may need to clean up the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
 
+### Variables
+
+This plugin will use the following project variables (defined in your app's `variables.gradle` file):
+
+- `$firebaseMessagingVersion` version of `com.google.firebase:firebase-messaging` (default: `23.0.5`)
+
 ### Prevent auto initialization
 
 If you need to implement opt-in behavior, you can disable the auto initialization of the library by following the [Firebase docs](https://firebase.google.com/docs/cloud-messaging/android/client#prevent-auto-init).
