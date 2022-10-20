@@ -145,7 +145,8 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 ## iOS setup
 
-- `sudo gem install cocoapods` _(once a time)_
+- [Install homebrew](https://capacitorjs.com/docs/getting-started/environment-setup#homebrew) _(once)_
+- `brew install cocoapods` _(once a time)_
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
