@@ -195,6 +195,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jcesarmobile",
+      "name": "jcesarmobile",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1637892?v=4",
+      "profile": "http://www.jcesarmobile.com/",
+      "contributions": [
+        "question",
+        "doc",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5
