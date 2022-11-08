@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/capacitor-community/fcm/compare/v3.0.0...v3.0.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* add sponsor ([e2270f6](https://github.com/capacitor-community/fcm/commit/e2270f607287fa1440c5150de57e93f4d52f42d6))
+* **android:** update firebaseMessagingVersion default value ([445b8ac](https://github.com/capacitor-community/fcm/commit/445b8ac805daf3ac52c3ccf0e4b89ed0e93a012d))
+* readme ([1cbc83c](https://github.com/capacitor-community/fcm/commit/1cbc83c7825395ea7310814fa70ed1fd0ca809bb))
+
 ### [2.0.2](https://github.com/capacitor-community/fcm/compare/v2.0.1...v2.0.2) (2021-10-04)
 
 ### [2.0.1](https://github.com/capacitor-community/fcm/compare/v2.0.0...v2.0.1) (2021-09-13)
