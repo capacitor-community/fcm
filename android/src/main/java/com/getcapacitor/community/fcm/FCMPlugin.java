@@ -64,23 +64,33 @@ public class FCMPlugin extends Plugin {
     @PluginMethod()
     public void getToken(final PluginCall call) {
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
+            if (!tokenResult.isSuccessful()) {
+                Exception exception = tokenResult.getException();
+                Log.w("FIREBASE_TOKEN_ERROR", "Fetching FCM registration token failed", exception);
+                call.errorCallback(exception.getLocalizedMessage());
+                return;
+            }
             JSObject data = new JSObject();
             data.put("token", tokenResult.getResult());
             call.resolve(data);
         });
 
-        FirebaseMessaging.getInstance().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
     }
     
     @PluginMethod()
     public void refreshToken(final PluginCall call) {
         FirebaseMessaging.getInstance().deleteToken();
         FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
+            if (!instanceIdResult.isSuccessful()) {
+                Exception exception = instanceIdResult.getException();
+                Log.w("FIREBASE_TOKEN_ERROR", "Fetching FCM registration token failed", exception);
+                call.errorCallback(exception.getLocalizedMessage());
+                return;
+            }
             JSObject data = new JSObject();
             data.put("token", instanceIdResult.getToken());
             call.resolve(data);
         });
-        FirebaseInstallations.getInstance().getId().addOnFailureListener(e -> call.reject("Failed to get instance FirebaseID", e));
     }
 
     @PluginMethod()
