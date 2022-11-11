@@ -19,6 +19,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 )
 public class FCMPlugin extends Plugin {
 
+    public static final String TAG = "FirebaseMessaging";
+
     @PluginMethod()
     public void subscribeTo(final PluginCall call) {
         final String topicName = call.getString("topic");
@@ -66,7 +68,7 @@ public class FCMPlugin extends Plugin {
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
             if (!tokenResult.isSuccessful()) {
                 Exception exception = tokenResult.getException();
-                Log.w("FIREBASE_TOKEN_ERROR", "Fetching FCM registration token failed", exception);
+                Log.w(TAG, "Fetching FCM registration token failed", exception);
                 call.errorCallback(exception.getLocalizedMessage());
                 return;
             }
@@ -83,7 +85,7 @@ public class FCMPlugin extends Plugin {
         FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
             if (!instanceIdResult.isSuccessful()) {
                 Exception exception = instanceIdResult.getException();
-                Log.w("FIREBASE_TOKEN_ERROR", "Fetching FCM registration token failed", exception);
+                Log.w(TAG, "Fetching FCM registration token failed", exception);
                 call.errorCallback(exception.getLocalizedMessage());
                 return;
             }
