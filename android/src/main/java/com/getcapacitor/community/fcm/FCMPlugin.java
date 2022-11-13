@@ -68,7 +68,7 @@ public class FCMPlugin extends Plugin {
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
             if (!tokenResult.isSuccessful()) {
                 Exception exception = tokenResult.getException();
-                Log.w(TAG, "Fetching FCM registration token failed", exception);
+                Log.e(TAG, "Fetching FCM registration token failed", exception);
                 call.errorCallback(exception.getLocalizedMessage());
                 return;
             }
@@ -85,7 +85,7 @@ public class FCMPlugin extends Plugin {
         FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
             if (!instanceIdResult.isSuccessful()) {
                 Exception exception = instanceIdResult.getException();
-                Log.w(TAG, "Fetching FCM registration token failed", exception);
+                Log.e(TAG, "Fetching FCM registration token failed", exception);
                 call.errorCallback(exception.getLocalizedMessage());
                 return;
             }
