@@ -84,12 +84,6 @@ public class FCMPlugin extends Plugin {
     public void refreshToken(final PluginCall call) {
         FirebaseMessaging.getInstance().deleteToken();
         FirebaseInstallations.getInstance().getToken(false).addOnSuccessListener(getActivity(), instanceIdResult -> {
-            if (!instanceIdResult.isSuccessful()) {
-                Exception exception = instanceIdResult.getException();
-                Log.e(TAG, "Fetching FCM registration token failed", exception);
-                call.errorCallback(exception.getLocalizedMessage());
-                return;
-            }
             JSObject data = new JSObject();
             data.put("token", instanceIdResult.getToken());
             call.resolve(data);
