@@ -69,6 +69,7 @@ npx cap sync
 > This plugin is intended to be used combined with Capacitor API for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications). Capacitor only provides APN token whereas this plugin offers the possibility to work with FCM tokens and more.
 
 ## API
+
 | method              | info                                          | platform    |
 | ------------------- | --------------------------------------------- | ----------- |
 | `subscribeTo`       | subscribe to fcm topic                        | ios/android |
@@ -78,7 +79,6 @@ npx cap sync
 | `deleteInstance`    | remove local fcm instance completely          | ios/android |
 | `setAutoInit`       | enable the auto initialization of the library | ios/android |
 | `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
-
 
 ## Usage
 
