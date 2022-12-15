@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/capacitor-community/fcm/compare/v3.0.1...v3.0.2) (2022-12-07)
+
+
+### Bug Fixes
+
+* check if task is successful before accessing result to avoid crashes ([0304daa](https://github.com/capacitor-community/fcm/commit/0304daa54d25305a166661d9040bd7cb107261da))
+
 ### [3.0.1](https://github.com/capacitor-community/fcm/compare/v3.0.0...v3.0.1) (2022-11-08)
 
 

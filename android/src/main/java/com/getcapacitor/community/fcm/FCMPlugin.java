@@ -1,5 +1,7 @@
 package com.getcapacitor.community.fcm;
 
+import android.util.Log;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -18,6 +20,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
         name = "FCM"
 )
 public class FCMPlugin extends Plugin {
+
+    public static final String TAG = "FirebaseMessaging";
 
     @PluginMethod()
     public void subscribeTo(final PluginCall call) {
@@ -64,6 +68,12 @@ public class FCMPlugin extends Plugin {
     @PluginMethod()
     public void getToken(final PluginCall call) {
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
+            if (!tokenResult.isSuccessful()) {
+                Exception exception = tokenResult.getException();
+                Log.w(TAG, "Fetching FCM registration token failed", exception);
+                call.errorCallback(exception.getLocalizedMessage());
+                return;
+            }
             JSObject data = new JSObject();
             data.put("token", tokenResult.getResult());
             call.resolve(data);
