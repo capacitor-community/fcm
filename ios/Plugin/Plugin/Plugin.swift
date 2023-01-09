@@ -58,7 +58,17 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
             }
         }
     }
-    
+
+    @objc func deleteToken(_ call: CAPPluginCall) {
+        Messaging.messaging().deleteToken(completion: { error in
+            if ((error) != nil) {
+                call.reject("Can't delete token")
+            }else{
+                call.resolve()
+            }
+        })
+    }
+
     @objc func getToken(_ call: CAPPluginCall) {
         if (fcmToken ?? "").isEmpty {
             Messaging.messaging().token { token, error in

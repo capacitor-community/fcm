@@ -41,6 +41,11 @@ export interface FCMPlugin {
    refreshToken(): Promise<{ token: string }>;
 
   /**
+   * Remove firebase message token
+   */
+  deleteToken(): Promise<boolean>;
+
+  /**
    * Remove local fcm instance completely
    */
   deleteInstance(): Promise<boolean>;

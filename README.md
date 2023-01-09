@@ -105,6 +105,11 @@ FCM.getToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
 
+// Delete token
+FCM.deleteToken().then((r) => {
+  console.log("Token deleted");
+});
+
 // Remove FCM instance
 FCM.deleteInstance()
   .then(() => alert(`Token deleted`))

@@ -56,6 +56,21 @@ public class FCMPlugin extends Plugin {
     }
 
     @PluginMethod()
+    public void deleteToken(final PluginCall call) {
+        FirebaseMessaging
+                .getInstance()
+                .deleteToken()
+                .addOnSuccessListener(aVoid -> {
+                    System.out.println("delete token success");
+                    call.resolve();
+                })
+                .addOnFailureListener(e -> {
+                    e.printStackTrace();
+                    call.reject("Failed to delete token", e);
+                });
+    }
+
+    @PluginMethod()
     public void deleteInstance(final PluginCall call) {
         FirebaseInstallations.getInstance().delete()
                 .addOnSuccessListener(aVoid -> call.resolve())

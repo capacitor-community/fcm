@@ -21,6 +21,10 @@ export class FCMWeb extends WebPlugin implements FCMPlugin {
     throw this.unimplemented('Not implemented on web.');
   }
 
+  deleteToken(): Promise<boolean> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
   deleteInstance(): Promise<boolean> {
     throw this.unimplemented('Not implemented on web.');
   }
