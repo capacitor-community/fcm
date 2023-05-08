@@ -75,6 +75,7 @@ npx cap sync
 | `subscribeTo`       | subscribe to fcm topic                        | ios/android |
 | `unsubscribeFrom`   | unsubscribe from fcm topic                    | ios/android |
 | `getToken`          | get fcm token to eventually use from a server | ios/android |
+| `refreshToken`      | refresh fcm token to get a new one            | ios/android |
 | `deleteInstance`    | remove local fcm instance completely          | ios/android |
 | `setAutoInit`       | enable the auto initialization of the library | ios/android |
 | `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
@@ -102,6 +103,11 @@ FCM.unsubscribeFrom({ topic: "test" })
 
 // Get FCM token instead the APN one returned by Capacitor
 FCM.getToken()
+  .then((r) => alert(`Token ${r.token}`))
+  .catch((err) => console.log(err));
+
+// Delete the old FCM token and get a new one
+FCM.refrehToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
 
