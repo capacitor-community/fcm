@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-22-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-23-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -250,6 +250,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="20%"><a href="http://www.jcesarmobile.com/"><img src="https://avatars.githubusercontent.com/u/1637892?v=4?s=75" width="75px;" alt="jcesarmobile"/><br /><sub><b>jcesarmobile</b></sub></a><br /><a href="#question-jcesarmobile" title="Answering Questions">💬</a> <a href="https://github.com/capacitor-community/fcm/commits?author=jcesarmobile" title="Documentation">📖</a> <a href="#maintenance-jcesarmobile" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/ramikhafagi96"><img src="https://avatars.githubusercontent.com/u/38646828?v=4?s=75" width="75px;" alt="Rami Khafagi"/><br /><sub><b>Rami Khafagi</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=ramikhafagi96" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/bipoza"><img src="https://avatars.githubusercontent.com/u/26112509?v=4?s=75" width="75px;" alt="Bittor Poza"/><br /><sub><b>Bittor Poza</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=bipoza" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

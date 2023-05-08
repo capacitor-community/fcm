@@ -215,6 +215,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "bipoza",
+      "name": "Bittor Poza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26112509?v=4",
+      "profile": "https://github.com/bipoza",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 5
