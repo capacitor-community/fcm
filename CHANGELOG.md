@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/capacitor-community/fcm/compare/v4.0.0...v5.0.0) (2023-05-08)
+
 ## [4.0.0](https://github.com/capacitor-community/fcm/compare/v3.0.2...v4.0.0) (2023-05-08)
 
 
