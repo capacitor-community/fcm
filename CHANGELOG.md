@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/capacitor-community/fcm/compare/v3.0.2...v4.0.0) (2023-05-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update to Capacitor 5 (#144)
+
+### Features
+
+* Update to Capacitor 5 ([#144](https://github.com/capacitor-community/fcm/issues/144)) ([b453adb](https://github.com/capacitor-community/fcm/commit/b453adbcf358dccd3cdc2ddb0fa485d5d14ba0c4))
+
 ### [3.0.2](https://github.com/capacitor-community/fcm/compare/v3.0.1...v3.0.2) (2022-12-07)
 
 
