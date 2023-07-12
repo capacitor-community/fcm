@@ -101,13 +101,13 @@ FCM.unsubscribeFrom({ topic: "test" })
   .then(() => alert(`unsubscribed from topic`))
   .catch((err) => console.log(err));
 
-// Get FCM token instead the APN one returned by Capacitor
+// Get FCM token instead of the APN one returned by Capacitor
 FCM.getToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
 
 // Delete the old FCM token and get a new one
-FCM.refrehToken()
+FCM.refreshToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
 
