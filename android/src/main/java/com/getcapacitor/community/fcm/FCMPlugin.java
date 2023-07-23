@@ -84,13 +84,13 @@ public class FCMPlugin extends Plugin {
     
     @PluginMethod()
     public void refreshToken(final PluginCall call) {
-        FirebaseMessaging.getInstance().deleteToken();
-        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
-            JSObject data = new JSObject();
-            data.put("token", tokenResult.getResult());
-            call.resolve(data);
-        });
-        FirebaseMessaging.getInstance().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
+        FirebaseMessaging.getInstance().deleteToken().addOnCompleteListener((result) -> {
+            FirebaseMessaging.getInstance().getToken().addOnCompleteListener(getActivity(), tokenResult -> {
+                JSObject data = new JSObject();
+                data.put("token", tokenResult.getResult());
+                call.resolve(data);
+            }).addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
+        }).addOnFailureListener(e -> call.reject("Failed to delete FCM registration token", e));
     }
 
     @PluginMethod()
