@@ -6,13 +6,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2024?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-25-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-26-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -253,6 +253,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="20%"><a href="https://github.com/bipoza"><img src="https://avatars.githubusercontent.com/u/26112509?v=4?s=75" width="75px;" alt="Bittor Poza"/><br /><sub><b>Bittor Poza</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=bipoza" title="Code">💻</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/Vishal-Isharani"><img src="https://avatars.githubusercontent.com/u/10386581?v=4?s=75" width="75px;" alt="Vishal Isharani"/><br /><sub><b>Vishal Isharani</b></sub></a><br /><a href="#maintenance-Vishal-Isharani" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/kashz"><img src="https://avatars.githubusercontent.com/u/12661101?v=4?s=75" width="75px;" alt="Shunta KARASAWA"/><br /><sub><b>Shunta KARASAWA</b></sub></a><br /><a href="#maintenance-kashz" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="http://www.chrisweight.com/"><img src="https://avatars.githubusercontent.com/u/468638?v=4?s=75" width="75px;" alt="Chris Weight"/><br /><sub><b>Chris Weight</b></sub></a><br /><a href="#maintenance-chrisweight" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
