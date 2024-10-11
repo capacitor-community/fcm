@@ -6,13 +6,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2024?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-23-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-26-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -22,13 +22,13 @@
 <table>
   <tr>
     <td align="center">
-      <a href="https://intenseloop.com">
-      <img src="https://static.intenseloop.com/assets/logo-512x512.png" width="40" />
+      <a href="https://chatness.ai">
+      <img src="https://cdn.chatness.ai/images/logo-white-symbol.png" width="40" />
       </a>
     </td>
     <td>
-      <a href="https://intenseloop.com">
-      Intenseloop
+      <a href="https://chatness.ai">
+      Chatness AI
       </a>
     </td>
   </tr>
@@ -83,8 +83,8 @@ npx cap sync
 ## Usage
 
 ```ts
-import { FCM } from "@capacitor-community/fcm";
-import { PushNotifications } from "@capacitor/push-notifications";
+import { FCM } from '@capacitor-community/fcm';
+import { PushNotifications } from '@capacitor/push-notifications';
 
 // external required step
 // register for push
@@ -92,36 +92,36 @@ await PushNotifications.requestPermissions();
 await PushNotifications.register();
 
 // now you can subscribe to a specific topic
-FCM.subscribeTo({ topic: "test" })
-  .then((r) => alert(`subscribed to topic`))
-  .catch((err) => console.log(err));
+FCM.subscribeTo({ topic: 'test' })
+  .then(r => alert(`subscribed to topic`))
+  .catch(err => console.log(err));
 
 // Unsubscribe from a specific topic
-FCM.unsubscribeFrom({ topic: "test" })
+FCM.unsubscribeFrom({ topic: 'test' })
   .then(() => alert(`unsubscribed from topic`))
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
 
 // Get FCM token instead of the APN one returned by Capacitor
 FCM.getToken()
-  .then((r) => alert(`Token ${r.token}`))
-  .catch((err) => console.log(err));
+  .then(r => alert(`Token ${r.token}`))
+  .catch(err => console.log(err));
 
 // Delete the old FCM token and get a new one
 FCM.refreshToken()
-  .then((r) => alert(`Token ${r.token}`))
-  .catch((err) => console.log(err));
+  .then(r => alert(`Token ${r.token}`))
+  .catch(err => console.log(err));
 
 // Remove FCM instance
 FCM.deleteInstance()
   .then(() => alert(`Token deleted`))
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
 
 // Enable the auto initialization of the library
 FCM.setAutoInit({ enabled: true }).then(() => alert(`Auto init enabled`));
 
 // Check the auto initialization status
-FCM.isAutoInitEnabled().then((r) => {
-  console.log("Auto init is " + (r.enabled ? "enabled" : "disabled"));
+FCM.isAutoInitEnabled().then(r => {
+  console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'));
 });
 ```
 
@@ -220,7 +220,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="20%"><a href="https://twitter.com/stewones"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt="Stew"/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://twitter.com/stewones"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt="stewones"/><br /><sub><b>stewones</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4?s=75" width="75px;" alt="Daniel Pereira"/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="20%"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4?s=75" width="75px;" alt="Priyank Patel"/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
       <td align="center" valign="top" width="20%"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4?s=75" width="75px;" alt="Nikolas"/><br /><sub><b>Nikolas</b></sub></a><br /><a href="#maintenance-nikoskip" title="Maintenance">🚧</a></td>
@@ -251,6 +251,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="20%"><a href="http://www.jcesarmobile.com/"><img src="https://avatars.githubusercontent.com/u/1637892?v=4?s=75" width="75px;" alt="jcesarmobile"/><br /><sub><b>jcesarmobile</b></sub></a><br /><a href="#question-jcesarmobile" title="Answering Questions">💬</a> <a href="https://github.com/capacitor-community/fcm/commits?author=jcesarmobile" title="Documentation">📖</a> <a href="#maintenance-jcesarmobile" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/ramikhafagi96"><img src="https://avatars.githubusercontent.com/u/38646828?v=4?s=75" width="75px;" alt="Rami Khafagi"/><br /><sub><b>Rami Khafagi</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=ramikhafagi96" title="Code">💻</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/bipoza"><img src="https://avatars.githubusercontent.com/u/26112509?v=4?s=75" width="75px;" alt="Bittor Poza"/><br /><sub><b>Bittor Poza</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=bipoza" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/Vishal-Isharani"><img src="https://avatars.githubusercontent.com/u/10386581?v=4?s=75" width="75px;" alt="Vishal Isharani"/><br /><sub><b>Vishal Isharani</b></sub></a><br /><a href="#maintenance-Vishal-Isharani" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/kashz"><img src="https://avatars.githubusercontent.com/u/12661101?v=4?s=75" width="75px;" alt="Shunta KARASAWA"/><br /><sub><b>Shunta KARASAWA</b></sub></a><br /><a href="#maintenance-kashz" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="http://www.chrisweight.com/"><img src="https://avatars.githubusercontent.com/u/468638?v=4?s=75" width="75px;" alt="Chris Weight"/><br /><sub><b>Chris Weight</b></sub></a><br /><a href="#maintenance-chrisweight" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
