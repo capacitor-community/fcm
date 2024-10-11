@@ -13,7 +13,7 @@
   "contributors": [
     {
       "login": "stewones",
-      "name": "Stew",
+      "name": "stewones",
       "avatar_url": "https://avatars1.githubusercontent.com/u/719763?v=4",
       "profile": "https://twitter.com/stewones",
       "contributions": [
@@ -223,6 +223,33 @@
       "profile": "https://github.com/bipoza",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "Vishal-Isharani",
+      "name": "Vishal Isharani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10386581?v=4",
+      "profile": "https://github.com/Vishal-Isharani",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "kashz",
+      "name": "Shunta KARASAWA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12661101?v=4",
+      "profile": "https://github.com/kashz",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "chrisweight",
+      "name": "Chris Weight",
+      "avatar_url": "https://avatars.githubusercontent.com/u/468638?v=4",
+      "profile": "http://www.chrisweight.com/",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
