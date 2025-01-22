@@ -3,10 +3,7 @@ import { FCMPlugin } from './definitions';
 
 export class FCMWeb extends WebPlugin implements FCMPlugin {
   constructor() {
-    super({
-      name: 'FCM',
-      platforms: ['web'],
-    });
+    super();
   }
 
   subscribeTo(_options: { topic: string }): Promise<{ message: string }> {
