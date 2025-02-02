@@ -112,6 +112,8 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
                 print("Error deleting installation: \(error)")
                 call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
             }
+            // reset fcmToken
+            self.fcmToken = "";
             call.resolve();
         }
     }
