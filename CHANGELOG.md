@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/capacitor-community/fcm/compare/v6.0.0...v6.0.1) (2025-02-02)
+
+
+### Bug Fixes
+
+* Reset fcmToken var when deleteInstance method called. ([#165](https://github.com/capacitor-community/fcm/issues/165)) ([46e8bf2](https://github.com/capacitor-community/fcm/commit/46e8bf2fd15b583c38fb8659ead7223892dcab4e))
+
 ## [6.0.0](https://github.com/capacitor-community/fcm/compare/v5.0.3...v6.0.0) (2024-05-23)
 
 
