@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2024?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
@@ -17,28 +17,11 @@
 
 </p>
 
-## Sponsors
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://chatness.ai">
-      <img src="https://cdn.chatness.ai/images/logo-white-symbol.png" width="40" />
-      </a>
-    </td>
-    <td>
-      <a href="https://chatness.ai">
-      Chatness AI
-      </a>
-    </td>
-  </tr>
-</table>
-
 ## Maintainers
 
 | Maintainer   | GitHub                                  | Social                                    |
 | ------------ | --------------------------------------- | ----------------------------------------- |
-| Stewan Silva | [stewones](https://github.com/stewones) | [@stewones](https://twitter.com/stewones) |
+| Stewan Silva | [stewones](https://github.com/stewones) | [@stewones](https://x.com/stewones) |
 
 ## Notice 🚀
 
