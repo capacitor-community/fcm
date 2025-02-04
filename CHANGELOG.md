@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/capacitor-community/fcm/compare/v6.0.1...v7.0.0) (2025-02-04)
+
+
+### Features
+
+* update to Capacitor 7 ([#166](https://github.com/capacitor-community/fcm/issues/166)) ([df01cbb](https://github.com/capacitor-community/fcm/commit/df01cbbd3fb7c03d2d7c2ae00484f314cedc3d2a))
+
 ### [6.0.1](https://github.com/capacitor-community/fcm/compare/v6.0.0...v6.0.1) (2025-02-02)
 
 
