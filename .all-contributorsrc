@@ -252,6 +252,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "ViMaSter",
+      "name": "Vincent Mahnke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1689033?v=4",
+      "profile": "https://by.vincent.mahn.ke/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 5

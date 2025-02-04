@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-26-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-27-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -239,6 +239,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="20%"><a href="http://www.chrisweight.com/"><img src="https://avatars.githubusercontent.com/u/468638?v=4?s=75" width="75px;" alt="Chris Weight"/><br /><sub><b>Chris Weight</b></sub></a><br /><a href="#maintenance-chrisweight" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://by.vincent.mahn.ke/"><img src="https://avatars.githubusercontent.com/u/1689033?v=4?s=75" width="75px;" alt="Vincent Mahnke"/><br /><sub><b>Vincent Mahnke</b></sub></a><br /><a href="#maintenance-ViMaSter" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
