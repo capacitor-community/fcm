@@ -20,7 +20,7 @@ DerivedData/
 # macOS files
 .DS_Store
 
-
+package-lock.json
 
 # Based on Android gitignore template: https://github.com/github/gitignore/blob/HEAD/Android.gitignore
 
