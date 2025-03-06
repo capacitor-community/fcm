@@ -1,13 +1,11 @@
-import { registerPlugin } from "@capacitor/core";
-import { FCMPlugin } from "./definitions";
+import { registerPlugin } from '@capacitor/core';
 
-const FCM = registerPlugin<FCMPlugin>(
-    "FCM",
-    {
-        web: () => import("./web").then((m) => new m.FCMWeb()),
-    }
-);
+import type { FCMPlugin } from './definitions';
+
+const FCM = registerPlugin<FCMPlugin>('FCM', {
+  web: () => import('./web').then((m) => new m.FCMWeb()),
+});
 
 // export * from './web'; // @todo
-export * from "./definitions";
+export * from './definitions';
 export { FCM };
