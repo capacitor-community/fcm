@@ -1,5 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
-import { FCMPlugin } from './definitions';
+
+import type { FCMPlugin } from './definitions';
 
 export class FCMWeb extends WebPlugin implements FCMPlugin {
   constructor() {
