@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.1.1](https://github.com/capacitor-community/fcm/compare/v7.1.0...v7.1.1) (2025-03-18)
+
+
+### Bug Fixes
+
+* Remove res folder ([#174](https://github.com/capacitor-community/fcm/issues/174)) ([aeb4fa5](https://github.com/capacitor-community/fcm/commit/aeb4fa574910744e7ed631b6213d1c6ebfa5055a))
+
 ## [7.1.0](https://github.com/capacitor-community/fcm/compare/v7.0.0...v7.1.0) (2025-03-06)
 
 ## [7.0.0](https://github.com/capacitor-community/fcm/compare/v6.0.1...v7.0.0) (2025-02-04)
