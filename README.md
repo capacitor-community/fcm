@@ -127,7 +127,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - apple
   - create an app identifier (apple site)
     - add push notifications
-    - add signing request (https://help.apple.com/developer-account/#/devbfa00fef7)
+    - add signing request (https://developer.apple.com/help/account/certificates/create-a-certificate-signing-request)
     - generate an APN key and then note down the ID displayed. also download the p8 file (https://fluffy.es/p8-push-notification/)
 - firebase
   - add the downloaded p8 file to firebase settings with noted key ID and the account team ID
