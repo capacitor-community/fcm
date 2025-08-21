@@ -17,9 +17,8 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
     var fcmToken: String?
 
     override public func load() {
-        if FirebaseApp.app() == nil {
-            FirebaseApp.configure()
-        }
+        FirebaseApp.configure()
+        
         Messaging.messaging().delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.didRegisterWithToken(notification:)), name: .capacitorDidRegisterForRemoteNotifications, object: nil)
     }
