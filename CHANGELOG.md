@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.1.2](https://github.com/capacitor-community/fcm/compare/v7.1.1...v7.1.2) (2025-08-21)
+
+
+### Bug Fixes
+
+* remove unecessary nil check ([6cb97e2](https://github.com/capacitor-community/fcm/commit/6cb97e26e3a75cfdb82697ea69ed78c3d6c9d875))
+
 ### [7.1.1](https://github.com/capacitor-community/fcm/compare/v7.1.0...v7.1.1) (2025-03-18)
 
 
