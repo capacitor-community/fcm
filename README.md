@@ -160,6 +160,17 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 If you need to implement opt-in behavior, you can disable the auto initialization of the library by following the [Firebase docs](https://firebase.google.com/docs/cloud-messaging/ios/client#prevent_auto_initialization).
 
+### SPM setup (iOS 15.0+)
+
+__First ensure all your dependencies are compatible with SPM. Otherwise, stick to the Cocoapods installation steps.__
+
+You can also install the plugin using Swift Package Manager (SPM) instead of CocoaPods.
+To do so, you don't need to install CocoaPods (steps 1 & 2), but you'll need to configure capacitor to use SPM:
+* to add iOS target: `npx cap add ios --packagemanager SPM`
+* to migrate an existing target: `npx cap spm-migration-assistant` (with capacitor 7.4.0+).
+
+You can find more info in the official [capacitor docs](https://capacitorjs.com/docs/ios/spm).
+
 ## Android setup
 
 - `ionic start my-cap-app --capacitor`
