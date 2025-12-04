@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/fcm",
-  "version": "7.3.0",
+  "version": "8.0.0",
   "description": "Enable Firebase Cloud Messaging features for Capacitor apps",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
