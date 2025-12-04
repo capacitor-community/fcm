@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.1](https://github.com/capacitor-community/fcm/compare/v8.0.0...v8.0.1) (2025-12-04)
+
+
+### Bug Fixes
+
+* keep ios 14 support for now and pin firebase to 11 ([33315ee](https://github.com/capacitor-community/fcm/commit/33315ee3acbd75418085dbc9521b86f763c610ab))
+
 ## [8.0.0](https://github.com/capacitor-community/fcm/compare/v7.3.0...v8.0.0) (2025-12-04)
 
 ### Features
