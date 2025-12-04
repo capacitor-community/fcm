@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "CapacitorCommunityFcm",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "CapacitorCommunityFcm",
@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "7.0.0"),
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "12.6.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", "11.6.0"..<"12.0.0"),
     ],
     targets: [
         .target(
