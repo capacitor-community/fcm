@@ -179,7 +179,7 @@ Now you should be set to go. Try to run your client using `ionic cap run android
 
 This plugin will use the following project variables (defined in your app's `variables.gradle` file):
 
-- `$firebaseMessagingVersion` version of `com.google.firebase:firebase-messaging` (default: `23.1.2`)
+- `$firebaseMessagingVersion` version of `com.google.firebase:firebase-messaging` (default: `25.0.1`)
 
 ### Prevent auto initialization
 
