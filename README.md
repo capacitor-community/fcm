@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-27-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-28-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -160,6 +160,17 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 If you need to implement opt-in behavior, you can disable the auto initialization of the library by following the [Firebase docs](https://firebase.google.com/docs/cloud-messaging/ios/client#prevent_auto_initialization).
 
+### SPM setup (iOS 15.0+)
+
+__First ensure all your dependencies are compatible with SPM. Otherwise, stick to the Cocoapods installation steps.__
+
+You can also install the plugin using Swift Package Manager (SPM) instead of CocoaPods.
+To do so, you don't need to install CocoaPods (steps 1 & 2), but you'll need to configure capacitor to use SPM:
+* to add iOS target: `npx cap add ios --packagemanager SPM`
+* to migrate an existing target: `npx cap spm-migration-assistant` (with capacitor 7.4.0+).
+
+You can find more info in the official [capacitor docs](https://capacitorjs.com/docs/ios/spm).
+
 ## Android setup
 
 - `ionic start my-cap-app --capacitor`
@@ -240,6 +251,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="20%"><a href="http://www.chrisweight.com/"><img src="https://avatars.githubusercontent.com/u/468638?v=4?s=75" width="75px;" alt="Chris Weight"/><br /><sub><b>Chris Weight</b></sub></a><br /><a href="#maintenance-chrisweight" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="20%"><a href="https://by.vincent.mahn.ke/"><img src="https://avatars.githubusercontent.com/u/1689033?v=4?s=75" width="75px;" alt="Vincent Mahnke"/><br /><sub><b>Vincent Mahnke</b></sub></a><br /><a href="#maintenance-ViMaSter" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/tompidom"><img src="https://avatars.githubusercontent.com/u/47992794?v=4?s=75" width="75px;" alt="tompidom"/><br /><sub><b>tompidom</b></sub></a><br /><a href="#infra-tompidom" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     </tr>
   </tbody>
 </table>

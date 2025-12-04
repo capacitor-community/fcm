@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [7.3.0](https://github.com/capacitor-community/fcm/compare/v7.1.3...v7.3.0) (2025-12-04)
 
+* Nothing new here, just reverting a mistake
+
 ### [7.1.3](https://github.com/capacitor-community/fcm/compare/v7.1.1...v7.1.3) (2025-08-23)
 
 

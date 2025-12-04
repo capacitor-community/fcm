@@ -261,6 +261,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "tompidom",
+      "name": "tompidom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47992794?v=4",
+      "profile": "https://github.com/tompidom",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 5
