@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/capacitor-community/fcm/compare/v7.1.3...v7.2.0) (2025-12-04)
+
+
+### Features
+
+* iOS Swift Package definition ([#182](https://github.com/capacitor-community/fcm/issues/182)) ([bdfc5d7](https://github.com/capacitor-community/fcm/commit/bdfc5d7b669156be8483df03144aee7d4c47a45d))
+
 ### [7.1.3](https://github.com/capacitor-community/fcm/compare/v7.1.1...v7.1.3) (2025-08-23)
 
 
