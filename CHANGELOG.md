@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://github.com/capacitor-community/fcm/compare/v8.0.1...v8.1.0) (2025-12-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* Capacitor 8 support (#186)
+
+### Features
+
+* Capacitor 8 support ([#186](https://github.com/capacitor-community/fcm/issues/186)) ([8faa779](https://github.com/capacitor-community/fcm/commit/8faa7791863ff0ca146969058a91055c365b5bea))
+
 ### [8.0.1](https://github.com/capacitor-community/fcm/compare/v8.0.0...v8.0.1) (2025-12-04)
 
 
