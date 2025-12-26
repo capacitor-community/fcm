@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '14.0'
+platform :ios, '15.0'
 
 def capacitor_pods
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -10,11 +10,11 @@ end
 
 target 'Plugin' do
   # Pods for IonicRunner
-  pod 'FirebaseMessaging', '~> 11'
+  pod 'FirebaseMessaging', '~> 12'
   capacitor_pods
 end
 
 target 'PluginTests' do
-  pod 'FirebaseMessaging', '~> 11'
+  pod 'FirebaseMessaging', '~> 12'
   capacitor_pods
 end
