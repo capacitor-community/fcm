@@ -10,11 +10,11 @@ end
 
 target 'Plugin' do
   # Pods for IonicRunner
-  pod 'FirebaseMessaging', '~> 11'
+  pod 'FirebaseMessaging', '~> 12'
   capacitor_pods
 end
 
 target 'PluginTests' do
-  pod 'FirebaseMessaging', '~> 11'
+  pod 'FirebaseMessaging', '~> 12'
   capacitor_pods
 end
