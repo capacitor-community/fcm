@@ -81,26 +81,24 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
     }
 
     @objc func refreshToken(_ call: CAPPluginCall) {
-        // Delete FCM Token on Firebase
-        FirebaseMessaging.Messaging.messaging().deleteData { error in
-            guard let error = error else {
-                print("Delete FCMToken successful!")
+        Messaging.messaging().deleteToken { error in
+            if let error = error {
+                print("Error deleting FCM token: \(error)")
+                call.reject("Failed to delete FCM token", error.localizedDescription)
                 return
             }
-            call.reject("Delete FCMToken failed", error.localizedDescription)
-            print("Delete FCMToken failed: \(String(describing: error.localizedDescription))!")
-        }
 
-        Messaging.messaging().token { token, error in
-            if let error = error {
-                print("Error fetching FCM registration token: \(error)")
-                call.reject("Failed to get instance FirebaseID", error.localizedDescription)
-            } else if let token = token {
-                print("FCM registration token: \(token)")
-                self.fcmToken = token
-                call.resolve([
-                    "token": token
-                ])
+            Messaging.messaging().token { token, error in
+                if let error = error {
+                    print("Error fetching FCM registration token: \(error)")
+                    call.reject("Failed to get FCM registration token", error.localizedDescription)
+                } else if let token = token {
+                    print("FCM registration token: \(token)")
+                    self.fcmToken = token
+                    call.resolve([
+                        "token": token
+                    ])
+                }
             }
         }
     }
