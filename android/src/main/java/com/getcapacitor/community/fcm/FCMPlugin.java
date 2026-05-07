@@ -1,6 +1,7 @@
 package com.getcapacitor.community.fcm;
 
 import android.util.Log;
+import androidx.annotation.NonNull;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -19,6 +20,67 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class FCMPlugin extends Plugin {
 
     public static final String TAG = "FirebaseMessaging";
+    private static final String EVENT_TOKEN_RECEIVED = "tokenReceived";
+
+    // Track the live plugin instance and buffer the last token in case
+    // FCMMessagingService.onNewToken fires before the plugin has loaded.
+    private static volatile FCMPlugin instance;
+
+    // Single-slot buffer. If onNewToken fires multiple times before the plugin
+    // load() runs, only the latest token is retained. Acceptable trade-off:
+    // (1) cold-start double-mints from FCM are extremely rare, and
+    // (2) once load() has run, instance != null and onNewTokenReceived
+    //     dispatches immediately.
+    private static volatile String pendingToken;
+
+    // Last token actually emitted to JS via notifyListeners. Used to dedupe
+    // back-to-back deliveries of the same token (FCM sometimes re-emits on
+    // service restart or after process death). Symmetry with the iOS plugin.
+    private volatile String lastNotifiedToken;
+
+    @Override
+    public void load() {
+        super.load();
+        instance = this;
+        if (pendingToken != null) {
+            dispatchTokenReceived(pendingToken);
+            pendingToken = null;
+        }
+    }
+
+    @Override
+    protected void handleOnDestroy() {
+        if (instance == this) {
+            instance = null;
+        }
+        super.handleOnDestroy();
+    }
+
+    /**
+     * Static entry point called from FCMMessagingService whenever
+     * FirebaseMessagingService.onNewToken fires. Buffers the token if the
+     * plugin has not loaded yet (e.g. cold-start race) and dispatches it via
+     * notifyListeners on the next load() call.
+     */
+    public static void onNewTokenReceived(@NonNull String token) {
+        FCMPlugin live = instance;
+        if (live != null) {
+            live.dispatchTokenReceived(token);
+        } else {
+            pendingToken = token;
+        }
+    }
+
+    private synchronized void dispatchTokenReceived(@NonNull String token) {
+        if (token.equals(lastNotifiedToken)) {
+            return;
+        }
+        lastNotifiedToken = token;
+
+        JSObject data = new JSObject();
+        data.put("token", token);
+        notifyListeners(EVENT_TOKEN_RECEIVED, data, true);
+    }
 
     @PluginMethod
     public void subscribeTo(final PluginCall call) {

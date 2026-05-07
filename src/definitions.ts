@@ -77,21 +77,26 @@ export interface FCMPlugin {
    * The `tokenReceived` event fires whenever the underlying Firebase
    * Messaging SDK delivers a new or refreshed token to the device.
    *
-   * **iOS** (this release): emitted from
-   * `MessagingDelegate.messaging(_:didReceiveRegistrationToken:)`. This fires
+   * **iOS**: emitted from
+   * `MessagingDelegate.messaging(_:didReceiveRegistrationToken:)`. Fires
    * shortly after `PushNotifications.register()` succeeds (once FCM has
    * exchanged the APNs device token for an FCM registration token), and
    * again on any subsequent token rotation (e.g. `refreshToken()`, app
    * reinstall, restored from backup).
    *
-   * **Android**: a follow-up PR will add the corresponding Android
-   * implementation. Until then this listener fires on iOS only.
+   * **Android**: emitted from `FirebaseMessagingService.onNewToken(String)`,
+   * forwarded by the bundled `FCMMessagingService` subclass of
+   * `@capacitor/push-notifications`' `MessagingService`. Fires on first
+   * registration, on `refreshToken()`, and on any FCM-internal token
+   * rotation. Tokens minted before the JS listener attaches are buffered
+   * by the native plugin and dispatched as soon as the listener registers.
    *
    * **When to use this listener over `getToken()`:**
    * Prefer this event for persisting the token to your backend.
    * `getToken()` can return a stale value on iOS if called immediately after
    * `PushNotifications.register()` because the FCM ↔ APNs exchange has not
-   * yet completed.
+   * yet completed. On Android, this event is the only signal for asynchronous
+   * token rotations after the initial registration.
    *
    * @example
    * ```ts
