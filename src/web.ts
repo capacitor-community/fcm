@@ -1,6 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { FCMPlugin } from './definitions';
+import type { FCMPlugin, FirebaseOptions } from './definitions';
 
 export class FCMWeb extends WebPlugin implements FCMPlugin {
   constructor() {
@@ -32,6 +32,10 @@ export class FCMWeb extends WebPlugin implements FCMPlugin {
   }
 
   refreshToken(): Promise<{ token: string }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  setFirebaseOptions(_options: FirebaseOptions): Promise<void> {
     throw this.unimplemented('Not implemented on web.');
   }
 }

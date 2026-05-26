@@ -6,6 +6,8 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -19,6 +21,13 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class FCMPlugin extends Plugin {
 
     public static final String TAG = "FirebaseMessaging";
+
+    private FirebaseApp secondaryApp;
+    private FirebaseMessaging secondaryMessaging;
+
+    private FirebaseMessaging getFirebaseMessaging() {
+        return secondaryApp != null ? secondaryMessaging : FirebaseMessaging.getInstance();
+    }
 
     @PluginMethod
     public void subscribeTo(final PluginCall call) {
@@ -61,7 +70,7 @@ public class FCMPlugin extends Plugin {
 
     @PluginMethod
     public void getToken(final PluginCall call) {
-        FirebaseMessaging.getInstance()
+        getFirebaseMessaging()
             .getToken()
             .addOnCompleteListener(getActivity(), tokenResult -> {
                 if (!tokenResult.isSuccessful()) {
@@ -75,15 +84,15 @@ public class FCMPlugin extends Plugin {
                 call.resolve(data);
             });
 
-        FirebaseMessaging.getInstance().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
+        getFirebaseMessaging().getToken().addOnFailureListener(e -> call.reject("Failed to get FCM registration token", e));
     }
 
     @PluginMethod
     public void refreshToken(final PluginCall call) {
-        FirebaseMessaging.getInstance()
+        getFirebaseMessaging()
             .deleteToken()
             .addOnCompleteListener(result -> {
-                FirebaseMessaging.getInstance()
+                getFirebaseMessaging()
                     .getToken()
                     .addOnCompleteListener(getActivity(), tokenResult -> {
                         JSObject data = new JSObject();
@@ -98,15 +107,45 @@ public class FCMPlugin extends Plugin {
     @PluginMethod
     public void setAutoInit(final PluginCall call) {
         final boolean enabled = call.getBoolean("enabled", false);
-        FirebaseMessaging.getInstance().setAutoInitEnabled(enabled);
+        getFirebaseMessaging().setAutoInitEnabled(enabled);
         call.resolve();
     }
 
     @PluginMethod
     public void isAutoInitEnabled(final PluginCall call) {
-        final boolean enabled = FirebaseMessaging.getInstance().isAutoInitEnabled();
+        final boolean enabled = getFirebaseMessaging().isAutoInitEnabled();
         JSObject data = new JSObject();
         data.put("enabled", enabled);
         call.resolve(data);
+    }
+
+    @PluginMethod
+    public void setFirebaseOptions(final PluginCall call) {
+        String applicationId = call.getString("applicationId");
+        String apiKey = call.getString("apiKey");
+        String projectId = call.getString("projectId");
+
+        // gcmSenderId is accepted for interface parity with iOS but omitted from
+        // FirebaseOptions.Builder — setGcmSenderId() was removed in Firebase Android SDK 29+.
+        FirebaseOptions options = new FirebaseOptions.Builder()
+            .setApplicationId(applicationId)
+            .setApiKey(apiKey)
+            .setProjectId(projectId)
+            .build();
+
+        // Use a named secondary app ("FCM") so we don't conflict with or
+        // re-initialize the default app that may already exist from google-services.json.
+        FirebaseApp existing = null;
+        for (FirebaseApp app : FirebaseApp.getApps(getContext())) {
+            if ("FCM".equals(app.getName())) {
+                existing = app;
+                break;
+            }
+        }
+        secondaryApp = existing != null
+            ? existing
+            : FirebaseApp.initializeApp(getContext(), options, "FCM");
+        secondaryMessaging = secondaryApp.get(FirebaseMessaging.class);
+        call.resolve();
     }
 }
