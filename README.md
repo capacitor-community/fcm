@@ -47,6 +47,16 @@ Sync native files:
 npx cap sync
 ```
 
+### Compatibility
+
+| Plugin      | Capacitor | iOS deployment target | Android `minSdkVersion` |
+| ----------- | --------- | --------------------- | ----------------------- |
+| 8.1.0+      | 8         | 15.0                  | 24                      |
+| 7.x - 8.0.x | 7         | 14.0                  | 23                      |
+| 6.x         | 6         | 13.0                  | 22                      |
+| 4.x - 5.x   | 5         | 13.0                  | 22                      |
+| 3.x         | 4         | 13.0                  | 22                      |
+
 > ### Notice
 >
 > This plugin is intended to be used combined with Capacitor API for [Push Notifications](https://capacitor.ionicframework.com/docs/apis/push-notifications). Capacitor only provides APN token whereas this plugin offers the possibility to work with FCM tokens and more.
