@@ -270,6 +270,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "DavidBowdoin",
+      "name": "David Bowdoin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3190879?v=4",
+      "profile": "https://github.com/DavidBowdoin",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 5
