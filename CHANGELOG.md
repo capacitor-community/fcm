@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.2.0](https://github.com/capacitor-community/fcm/compare/v8.1.0...v8.2.0) (2026-09-29)
+
+
+### Features
+
+* **ios:** allow Firebase iOS SDK 12 in Swift Package dependency ([#196](https://github.com/capacitor-community/fcm/issues/196)) ([63e0bcf](https://github.com/capacitor-community/fcm/commit/63e0bcfca4e4147b5e5a3e5e2a86ca3c5b8aedd9))
+* **ios:** emit tokenReceived event when FCM token is issued ([#190](https://github.com/capacitor-community/fcm/issues/190)) ([41223d6](https://github.com/capacitor-community/fcm/commit/41223d62f90e9170c4ceea79a96dfb83691b53e7))
+
+
+### Bug Fixes
+
+* **android:** replace deprecated proguard-android.txt with proguard-android-optimize.txt ([#194](https://github.com/capacitor-community/fcm/issues/194)) ([172470f](https://github.com/capacitor-community/fcm/commit/172470f21eba3ee4b5cb44777c9a559bf90fdc0a))
+* **ios:** declare Cordova dependency for the ObjC SPM target ([ec4bd0b](https://github.com/capacitor-community/fcm/commit/ec4bd0b7ec57ba75e52428b69d9d82627e4f0929))
+* **ios:** use deleteToken in refreshToken to avoid race ([#189](https://github.com/capacitor-community/fcm/issues/189)) ([4ef4c47](https://github.com/capacitor-community/fcm/commit/4ef4c4773d6a36698ea0a158cda317609f651035))
+
 ## [8.1.0](https://github.com/capacitor-community/fcm/compare/v8.0.1...v8.1.0) (2025-12-26)
 
 
