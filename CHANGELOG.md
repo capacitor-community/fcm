@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.2.1](https://github.com/capacitor-community/fcm/compare/v8.2.0...v8.2.1) (2026-09-29)
+
+
+### Bug Fixes
+
+* **ios:** include the Firebase error in rejection messages ([21b81db](https://github.com/capacitor-community/fcm/commit/21b81db01da86aff03e59b6fb7e5915899ace595)), closes [#181](https://github.com/capacitor-community/fcm/issues/181)
+* point main to the CommonJS bundle ([79c90cd](https://github.com/capacitor-community/fcm/commit/79c90cd8b18fe4cf2c1cd40a5d106b48c2a730ef)), closes [#103](https://github.com/capacitor-community/fcm/issues/103)
+
 ## [8.2.0](https://github.com/capacitor-community/fcm/compare/v8.1.0...v8.2.0) (2026-09-29)
 
 
