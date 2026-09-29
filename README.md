@@ -63,6 +63,10 @@ npx cap sync
 | `setAutoInit`       | enable the auto initialization of the library | ios/android |
 | `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
 
+| event           | info                                                                                                                                                           | platform |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `tokenReceived` | fires with `{ token }` when FCM issues or rotates the token. On Android, listen to PushNotifications' `registration` event instead; its value is the FCM token | ios      |
+
 ## Usage
 
 ```ts
