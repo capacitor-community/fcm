@@ -1,3 +1,19 @@
+import type { PluginListenerHandle } from '@capacitor/core';
+
+/**
+ * Payload emitted when FCM mints or refreshes a registration token.
+ */
+export type TokenReceivedEvent = {
+  /**
+   * The current FCM registration token. This is the same value that
+   * `FCMPlugin.getToken()` would return immediately after this event fires.
+   * Receiving it via the listener avoids the iOS race between APNs
+   * registration completing and FCM exchanging the APNs token for an FCM
+   * registration token.
+   */
+  token: string;
+};
+
 export interface FCMPlugin {
   /**
    * Subscribe to fcm topic
@@ -54,4 +70,44 @@ export interface FCMPlugin {
    * Retrieve the auto initialization status.
    */
   isAutoInitEnabled(): Promise<{ enabled: boolean }>;
+
+  /**
+   * Subscribe to fresh FCM registration tokens.
+   *
+   * The `tokenReceived` event fires whenever the underlying Firebase
+   * Messaging SDK delivers a new or refreshed token to the device.
+   *
+   * **iOS** (this release): emitted from
+   * `MessagingDelegate.messaging(_:didReceiveRegistrationToken:)`. This fires
+   * shortly after `PushNotifications.register()` succeeds (once FCM has
+   * exchanged the APNs device token for an FCM registration token), and
+   * again on any subsequent token rotation (e.g. `refreshToken()`, app
+   * reinstall, restored from backup).
+   *
+   * **Android**: a follow-up PR will add the corresponding Android
+   * implementation. Until then this listener fires on iOS only.
+   *
+   * **When to use this listener over `getToken()`:**
+   * Prefer this event for persisting the token to your backend.
+   * `getToken()` can return a stale value on iOS if called immediately after
+   * `PushNotifications.register()` because the FCM ↔ APNs exchange has not
+   * yet completed.
+   *
+   * @example
+   * ```ts
+   * const handle = await FCM.addListener('tokenReceived', ({ token }) => {
+   *   await saveFcmToken(token);
+   * });
+   * // later: await handle.remove();
+   * ```
+   */
+  addListener(
+    eventName: 'tokenReceived',
+    listenerFunc: (event: TokenReceivedEvent) => void,
+  ): Promise<PluginListenerHandle>;
+
+  /**
+   * Remove all event listeners registered on this plugin.
+   */
+  removeAllListeners(): Promise<void>;
 }
