@@ -36,9 +36,9 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().subscribe(toTopic: topicName) { error in
             // print("Subscribed to weather topic")
-            if (error) != nil {
+            if let error = error {
                 print("ERROR while trying to subscribe topic \(topicName)")
-                call.reject("Can't subscribe to topic \(topicName)")
+                call.reject("Can't subscribe to topic \(topicName): \(error.localizedDescription)", nil, error)
             } else {
                 call.resolve([
                     "message": "subscribed to topic \(topicName)"
@@ -50,8 +50,8 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
     @objc func unsubscribeFrom(_ call: CAPPluginCall) {
         let topicName = call.getString("topic") ?? ""
         Messaging.messaging().unsubscribe(fromTopic: topicName) { error in
-            if (error) != nil {
-                call.reject("Can't unsubscribe from topic \(topicName)")
+            if let error = error {
+                call.reject("Can't unsubscribe from topic \(topicName): \(error.localizedDescription)", nil, error)
             } else {
                 call.resolve([
                     "message": "unsubscribed from topic \(topicName)"
@@ -65,7 +65,7 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
             Messaging.messaging().token { token, error in
                 if let error = error {
                     print("Error fetching FCM registration token: \(error)")
-                    call.reject("Failed to get instance FirebaseID", error.localizedDescription)
+                    call.reject("Failed to get instance FirebaseID: \(error.localizedDescription)", nil, error)
                 } else if let token = token {
                     print("FCM registration token: \(token)")
                     self.fcmToken = token
@@ -85,14 +85,14 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
         Messaging.messaging().deleteToken { error in
             if let error = error {
                 print("Error deleting FCM token: \(error)")
-                call.reject("Failed to delete FCM token", error.localizedDescription)
+                call.reject("Failed to delete FCM token: \(error.localizedDescription)", nil, error)
                 return
             }
 
             Messaging.messaging().token { token, error in
                 if let error = error {
                     print("Error fetching FCM registration token: \(error)")
-                    call.reject("Failed to get FCM registration token", error.localizedDescription)
+                    call.reject("Failed to get FCM registration token: \(error.localizedDescription)", nil, error)
                 } else if let token = token {
                     print("FCM registration token: \(token)")
                     self.fcmToken = token
@@ -108,7 +108,8 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
         Installations.installations().delete { error in
             if let error = error {
                 print("Error deleting installation: \(error)")
-                call.reject("Cant delete Firebase Instance ID", error.localizedDescription)
+                call.reject("Cant delete Firebase Instance ID: \(error.localizedDescription)", nil, error)
+                return
             }
             // reset fcmToken
             self.fcmToken = ""
