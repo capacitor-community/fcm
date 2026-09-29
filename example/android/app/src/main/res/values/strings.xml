@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">capacitor-fcm-demo</string>
-    <string name="title_activity_main">capacitor-fcm-demo</string>
-    <string name="package_name">io.capacitor.starter</string>
-    <string name="fileprovider_authority">io.capacitor.starter.fileprovider</string>
-    <string name="custom_url_scheme">io.capacitor.starter</string>
+    <string name="app_name">FCM Example</string>
+    <string name="title_activity_main">FCM Example</string>
+    <string name="package_name">io.capacitor.community.fcm.example</string>
+    <string name="custom_url_scheme">io.capacitor.community.fcm.example</string>
 </resources>
