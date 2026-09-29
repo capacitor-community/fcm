@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-29-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-30-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
@@ -257,6 +257,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="20%"><a href="https://by.vincent.mahn.ke/"><img src="https://avatars.githubusercontent.com/u/1689033?v=4?s=75" width="75px;" alt="Vincent Mahnke"/><br /><sub><b>Vincent Mahnke</b></sub></a><br /><a href="#maintenance-ViMaSter" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/tompidom"><img src="https://avatars.githubusercontent.com/u/47992794?v=4?s=75" width="75px;" alt="tompidom"/><br /><sub><b>tompidom</b></sub></a><br /><a href="#infra-tompidom" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
       <td align="center" valign="top" width="20%"><a href="https://github.com/DavidBowdoin"><img src="https://avatars.githubusercontent.com/u/3190879?v=4?s=75" width="75px;" alt="David Bowdoin"/><br /><sub><b>David Bowdoin</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=DavidBowdoin" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/tiennp-dev"><img src="https://avatars.githubusercontent.com/u/74178245?v=4?s=75" width="75px;" alt="tiennp-dev"/><br /><sub><b>tiennp-dev</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=tiennp-dev" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
