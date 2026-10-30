@@ -14,6 +14,25 @@ export type TokenReceivedEvent = {
   token: string;
 };
 
+export interface FirebaseOptions {
+  /**
+   * The Firebase app ID (mobilesdk_app_id on Android, GOOGLE_APP_ID on iOS).
+   */
+  applicationId: string;
+  /**
+   * The GCM sender ID (the Firebase project number).
+   */
+  gcmSenderId: string;
+  /**
+   * The Firebase API key.
+   */
+  apiKey: string;
+  /**
+   * The Firebase project ID.
+   */
+  projectId: string;
+}
+
 export interface FCMPlugin {
   /**
    * Subscribe to fcm topic
@@ -115,4 +134,28 @@ export interface FCMPlugin {
    * Remove all event listeners registered on this plugin.
    */
   removeAllListeners(): Promise<void>;
+
+  /**
+   * Initialize Firebase with runtime credentials instead of relying on a
+   * static google-services.json / GoogleService-Info.plist. Intended for
+   * multi-tenant apps where the correct Firebase project is only known after
+   * the user authenticates.
+   *
+   * All four options are required; the call is rejected if any is missing.
+   * Must be called before PushNotifications.register() / getToken().
+   *
+   * Platform notes:
+   * - Android: creates a named secondary FirebaseApp ("FCM") so it does not
+   *   conflict with the default app initialized from google-services.json.
+   *   Every method of this plugin is routed through it once set. Calling it
+   *   again with different options deletes and re-creates that app, so tenants
+   *   can be switched at runtime. Keep google-services.json in the app, since
+   *   `@capacitor/push-notifications` still uses the default app, and read the
+   *   tenant token with `getToken()` rather than its `registration` event.
+   * - iOS: configures the default FirebaseApp, which only works when no
+   *   GoogleService-Info.plist is shipped. The Firebase iOS SDK cannot
+   *   re-configure an app, so switching tenants requires an app restart; a
+   *   second call is rejected. Other methods reject until Firebase is configured.
+   */
+  setFirebaseOptions(options: FirebaseOptions): Promise<void>;
 }

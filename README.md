@@ -63,15 +63,16 @@ npx cap sync
 
 ## API
 
-| method              | info                                          | platform    |
-| ------------------- | --------------------------------------------- | ----------- |
-| `subscribeTo`       | subscribe to fcm topic                        | ios/android |
-| `unsubscribeFrom`   | unsubscribe from fcm topic                    | ios/android |
-| `getToken`          | get fcm token to eventually use from a server | ios/android |
-| `refreshToken`      | refresh fcm token to get a new one            | ios/android |
-| `deleteInstance`    | remove local fcm instance completely          | ios/android |
-| `setAutoInit`       | enable the auto initialization of the library | ios/android |
-| `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
+| method               | info                                                                               | platform    |
+| -------------------- | ---------------------------------------------------------------------------------- | ----------- |
+| `subscribeTo`        | subscribe to fcm topic                                                             | ios/android |
+| `unsubscribeFrom`    | unsubscribe from fcm topic                                                         | ios/android |
+| `getToken`           | get fcm token to eventually use from a server                                      | ios/android |
+| `refreshToken`       | refresh fcm token to get a new one                                                 | ios/android |
+| `deleteInstance`     | remove local fcm instance completely                                               | ios/android |
+| `setAutoInit`        | enable the auto initialization of the library                                      | ios/android |
+| `isAutoInitEnabled`  | check whether auto initialization is enabled                                       | ios/android |
+| `setFirebaseOptions` | configure Firebase at runtime, see [Runtime configuration](#runtime-configuration) | ios/android |
 
 | event           | info                                                                                                                                                           | platform |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -121,6 +122,36 @@ FCM.isAutoInitEnabled().then(r => {
   console.log('Auto init is ' + (r.enabled ? 'enabled' : 'disabled'));
 });
 ```
+
+## Runtime configuration
+
+For multi-tenant apps where the Firebase project is only known at runtime, call `setFirebaseOptions` before registering for push:
+
+```ts
+await FCM.setFirebaseOptions({
+  applicationId: '1:1234567890:ios:abcdef', // GOOGLE_APP_ID / mobilesdk_app_id
+  gcmSenderId: '1234567890', // project number
+  apiKey: 'AIza...',
+  projectId: 'my-tenant-project',
+});
+await PushNotifications.register();
+const { token } = await FCM.getToken();
+```
+
+All four options are required; the call rejects if any is missing.
+
+**iOS**
+
+- Do **not** ship `GoogleService-Info.plist`. The plugin then skips the automatic configuration and waits for `setFirebaseOptions`.
+- The Firebase iOS SDK cannot re-configure an app. Switching tenants requires an app restart; a second call rejects.
+- Other methods reject until `setFirebaseOptions` has been called.
+
+**Android**
+
+- Keep `google-services.json`. `@capacitor/push-notifications` still uses the default Firebase app.
+- The tenant is configured as a secondary Firebase app named `FCM`, and every method of this plugin uses it once set.
+- Calling `setFirebaseOptions` again with different options replaces that app, so tenants can be switched without a restart.
+- The `registration` event of `@capacitor/push-notifications` carries the default app's token. Use `FCM.getToken()` for the tenant token.
 
 ## Add Google config files
 
